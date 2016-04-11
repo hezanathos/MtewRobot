@@ -4,7 +4,7 @@ Library           Selenium2Library
 
 *** Keywords ***
 !aller sur le net
-    open browser    url=http://10.0.2.2:8082/M-tew/signin    browser=firefox    ff_profile_dir=${profile}
+    open browser    url=http://10.0.2.2:8080/M-tew/signin    browser=firefox    ff_profile_dir=${profile}
 
 !entrer_id
     Input Text    sigin    ${id}
