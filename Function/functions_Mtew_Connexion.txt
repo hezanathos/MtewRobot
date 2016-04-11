@@ -1,5 +1,5 @@
 *** Settings ***
-Resource          ../Page_Object/pageobject_connection.txt
+Resource          ../Page_Object/pageObjects_Mtew_Connexion.txt
 
 *** Keywords ***
 connection_web
@@ -13,3 +13,7 @@ connection_log
 deconnection_log
     !click_profil
     !click_deconnection_bt
+
+assertURL
+    [Arguments]    ${url}
+    !assertURL    ${url}

@@ -1,6 +1,6 @@
 *** Settings ***
 Suite Teardown    close all browsers
-Resource          Function/function_connection.txt
+Resource          Function/functions_Mtew_Connexion.txt
 
 *** Test Cases ***
 test_connection

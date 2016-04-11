@@ -1,5 +1,5 @@
 *** Settings ***
-Resource          ../Page_Object/pageobject_connection_quizz.txt
+Resource          ../Page_Object/pageObjects_Mtew_Quizz.txt
 
 *** Keywords ***
 aller_quizz

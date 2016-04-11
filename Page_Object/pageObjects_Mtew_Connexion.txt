@@ -1,5 +1,5 @@
 *** Settings ***
-Resource          ../Conf/conf_connection.txt
+Resource          ../Conf/conf_Mtew_Connexion.txt
 Library           Selenium2Library
 
 *** Keywords ***
@@ -16,9 +16,13 @@ Library           Selenium2Library
     Click Element    sigin_button
 
 !click_profil
-    Wait Until Page Contains Element     xpath=//a[@class='dropdown-toggle']
-    Click Element     xpath=//a[@class='dropdown-toggle']
+    Wait Until Page Contains Element    xpath=//a[@class='dropdown-toggle']
+    Click Element    xpath=//a[@class='dropdown-toggle']
 
 !click_deconnection_bt
     sleep    1
-    Click Element     xpath=//a[@role='menuitem']
+    Click Element    xpath=//a[@role='menuitem']
+
+!assertURL
+    [Arguments]    ${url}
+    location should be    ${url}

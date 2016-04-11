@@ -1,5 +1,5 @@
 *** Settings ***
-Resource          ../Conf/conf_connection_quizz.txt
+Resource          ../Conf/conf_Mtew_Quizz.txt
 Library           Selenium2Library
 
 *** Keywords ***
