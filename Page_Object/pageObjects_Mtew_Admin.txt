@@ -1,0 +1,8 @@
+*** Settings ***
+Resource          ../Conf/conf_Mtew_Admin.txt
+Library           Selenium2Library
+
+*** Keywords ***
+!access_admin
+    click element    link=Administration
+    sleep    10

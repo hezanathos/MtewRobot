@@ -1,0 +1,9 @@
+*** Settings ***
+Resource          Function/functions_Mtew_Connexion.txt
+
+*** Test Cases ***
+Creation_User
+    connection_web
+    connection_log
+
+Destruction_User
