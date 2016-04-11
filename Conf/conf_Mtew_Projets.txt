@@ -1,0 +1,4 @@
+*** Variables ***
+${testName}       test1
+${testDesc}       testCase insertion valide
+${Administration}     \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Administration \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \

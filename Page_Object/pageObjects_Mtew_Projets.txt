@@ -1,0 +1,34 @@
+*** Settings ***
+Resource          ../Conf/conf_Mtew_Projets.txt
+Library           Selenium2Library
+
+*** Keywords ***
+!accessProjectPanel
+    wait until page contains element    id=administrationMenuItem
+    click element    id=administrationMenuItem
+    wait until page contains element    id=projectsSubMenuItem
+    click element    id=projectsSubMenuItem
+
+!accessAddProject
+    wait until page contains element    xpath=//span[text()="Ajouter un projet"]
+    click element    xpath=//span[text()="Ajouter un projet"]
+
+!submitFormAdd
+    click element    xpath=//input[@value="Sauvegarder"]
+
+!inputName
+    input text    id=name    ${testName}
+    input text    id=projectDescription    ${testDesc}
+
+!inputServices
+    click element    xpath=//label[@for="servicesIds1"]
+    click element    xpath=//label[@for="servicesIds3"]
+
+!recordProjectName
+    click element    xpath=//img[@class="sound-icon"]
+    click element    xpath=//span[text()="Enregistrer"]
+    sleep    5
+    click element    xpath=//span[@class="stop pull-left"]
+
+!assertInsert
+    Page should contain    ${testName}    ${testDesc}

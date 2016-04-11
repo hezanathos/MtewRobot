@@ -1,0 +1,19 @@
+*** Settings ***
+Resource          ../PageObject/pageObjects_Mtew_Projets.txt
+
+*** Keywords ***
+accessProjectPanel
+    !accessProjectPanel
+
+accessAddProject
+    !accessAddProject
+
+fillFormAdd
+    !inputName
+    !recordProjectName
+    !inputServices
+
+submitFormAdd
+    !submitFormAdd
+
+assertInsert

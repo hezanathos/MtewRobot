@@ -1,0 +1,25 @@
+*** Settings ***
+Resource          functions/functions_Mtew_Login.txt
+Resource          functions/functions_Mtew_Projets.txt
+
+*** Test Cases ***
+Mtew_Projets_RightInsert
+    accessMtew
+    inputRightIDs
+    accessProjectPanel
+    accessAddProject
+    assertURL    http://10.0.2.2:8080/M-tew/projects
+    fillFormAdd
+    submitFormAdd
+    assertURL    http://10.0.2.2:8080/M-tew/projets
+    assertInsert
+    [Teardown]    close all browsers
+
+Mtew_Projets_WrongInsert
+    accessMtew
+    inputRightIDs
+    accessProjectPanel
+    accessAddProject
+    assertURL    http://10.0.2.2:8080/M-tew/projects
+    submitFormAdd
+    assertURL
