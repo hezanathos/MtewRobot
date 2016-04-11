@@ -4,7 +4,7 @@ Library           Selenium2Library
 
 *** Keywords ***
 !aller sur le net
-    open browser    url=http://10.0.2.2:8080/M-tew/signin    browser=firefox    ff_profile_dir=/home/olps/.mozilla/firefox/l1v3e5k1.ProfileRide
+    open browser    url=http://10.0.2.2:8080/M-tew/signin    browser=firefox    ff_profile_dir=${profile}
 
 !entrer_id
     Input Text    sigin    ${id}
@@ -23,6 +23,6 @@ Library           Selenium2Library
     sleep    1
     Click Element    xpath=//a[@role='menuitem']
 
-!assertURL
+!assert_url
     [Arguments]    ${url}
     location should be    ${url}

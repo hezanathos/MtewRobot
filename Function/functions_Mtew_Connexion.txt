@@ -14,6 +14,6 @@ deconnection_log
     !click_profil
     !click_deconnection_bt
 
-assertURL
+assert_url
     [Arguments]    ${url}
-    !assertURL    ${url}
+    !assert_url    ${url}

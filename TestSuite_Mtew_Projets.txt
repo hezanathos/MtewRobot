@@ -7,21 +7,21 @@ Resource          Function/functions_Mtew_Projets.txt
 Mtew_Projets_RightInsert
     connection_web
     connection_log
-    accessProjectPanel
-    accessAddProject
-    assertURL    http://10.0.2.2:8080/M-tew/projects
-    fillFormAdd
-    submitFormAdd
-    assertURL    http://10.0.2.2:8080/M-tew/projets
-    assertInsert
+    access_project_panel
+    access_add_project
+    assert_url    http://10.0.2.2:8080/M-tew/projects
+    fill_form_add
+    submit_form_add
+    assert_url    http://10.0.2.2:8080/M-tew/projets
+    assert_insert
     [Teardown]    close all browsers
 
 Mtew_Projets_WrongInsert
     connection_web
     connection_log
-    accessProjectPanel
-    accessAddProject
-    assertURL    http://10.0.2.2:8080/M-tew/projects
-    submitFormAdd
-    assertURL    http://10.0.2.2:8080/M-tew/
+    access_project_panel
+    access_add_project
+    assert_url    http://10.0.2.2:8080/M-tew/projects
+    submit_form_add
+    assert_url    http://10.0.2.2:8080/M-tew/
     [Teardown]    close all browsers

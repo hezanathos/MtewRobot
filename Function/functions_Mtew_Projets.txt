@@ -2,18 +2,18 @@
 Resource          ../Page_Object/pageObjects_Mtew_Projets.txt
 
 *** Keywords ***
-accessProjectPanel
-    !accessProjectPanel
+access_project_panel
+    !access_project_panel
 
-accessAddProject
-    !accessAddProject
+access_add_project
+    !access_add_project
 
-fillFormAdd
-    !inputName
-    !recordProjectName
-    !inputServices
+fill_form_add
+    !input_name
+    !record_project_name
+    !input_services
 
-submitFormAdd
-    !submitFormAdd
+submit_form_add
+    !submit_form_add
 
-assertInsert
+assert_insert

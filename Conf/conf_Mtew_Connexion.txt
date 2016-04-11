@@ -1,3 +1,4 @@
 *** Variables ***
 ${id}             Techadmin
 ${mdp}            12345678
+${profile}        /home/olps/.mozilla/firefox/r8gzjab6.ProfileRide

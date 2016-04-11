@@ -3,32 +3,32 @@ Resource          ../Conf/conf_Mtew_Projets.txt
 Library           Selenium2Library
 
 *** Keywords ***
-!accessProjectPanel
+!access_project_panel
     wait until page contains element    id=administrationMenuItem
-    click element    id=administrationMenuItem
+    click element    xpath=//li.a[@class="dropdown-toggle"]
     wait until page contains element    id=projectsSubMenuItem
     click element    id=projectsSubMenuItem
 
-!accessAddProject
+!access_add_project
     wait until page contains element    xpath=//span[text()="Ajouter un projet"]
     click element    xpath=//span[text()="Ajouter un projet"]
 
-!submitFormAdd
+!submit_form_add
     click element    xpath=//input[@value="Sauvegarder"]
 
-!inputName
+!input_name
     input text    id=name    ${testName}
     input text    id=projectDescription    ${testDesc}
 
-!inputServices
+!input_services
     click element    xpath=//label[@for="servicesIds1"]
     click element    xpath=//label[@for="servicesIds3"]
 
-!recordProjectName
+!record_project_name
     click element    xpath=//img[@class="sound-icon"]
     click element    xpath=//span[text()="Enregistrer"]
     sleep    5
     click element    xpath=//span[@class="stop pull-left"]
 
-!assertInsert
+!assert_insert
     Page should contain    ${testName}    ${testDesc}
