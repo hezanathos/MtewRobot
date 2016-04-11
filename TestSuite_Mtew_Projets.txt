@@ -12,7 +12,6 @@ Mtew_Projets_RightInsert
     assert_url    http://10.0.2.2:8080/M-tew/projects/add
     fill_form_add
     submit_form_add
-    assert_url    http://10.0.2.2:8080/M-tew/projets
     assert_insert
     [Teardown]    close all browsers
 
@@ -26,3 +25,18 @@ Mtew_Projets_WrongInsert
     assert_url    http://10.0.2.2:8080/M-tew/projects/add
     assert_error    Le nom du projet doit être renseigné
     [Teardown]    close all browsers
+
+Mtew_Projets_RightDelete
+    connection_web
+    connection_log
+    access_project_panel
+    access_add_project
+    assert_url    http://10.0.2.2:8080/M-tew/projects/add
+    run keyword if
+
+Mtew_Projets_WrongDelete
+    connection_web
+    connection_log
+    access_project_panel
+    access_add_project
+    assert_url    http://10.0.2.2:8080/M-tew/projects/add

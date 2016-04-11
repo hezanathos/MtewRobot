@@ -17,7 +17,7 @@ Library           Selenium2Library
     click element    xpath=//input[@value="Sauvegarder"]
 
 !input_name
-    input text    id=name    ${testName}
+    input text    id=name    ${testNom}
     input text    id=projectDescription    ${testDesc}
 
 !input_services
@@ -27,11 +27,12 @@ Library           Selenium2Library
 !record_project_name
     click element    xpath=//span[@class="sound-icon"]
     click element    xpath=//span[text()="Enregistrer"]
-    sleep    5
+    sleep    10
     click element    xpath=//span[@class="stop pull-left"]
 
 !assert_insert
-    Page should contain    ${testName}    ${testDesc}
+    wait until page contains element    xpath=//div[@class="col-md-6 pull-right"]
+    Page should contain    ${testNom}    ${testDesc}
 
 !assert_error
     [Arguments]    ${message}
