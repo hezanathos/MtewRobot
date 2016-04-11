@@ -5,7 +5,7 @@ Library           Selenium2Library
 *** Keywords ***
 !access_project_panel
     wait until page contains element    id=administrationMenuItem
-    click element    xpath=//li.a[@class="dropdown-toggle"]
+    click element    xpath=//li[@id="administrationMenuItem"]//a[@class="dropdown-toggle"]
     wait until page contains element    id=projectsSubMenuItem
     click element    id=projectsSubMenuItem
 
@@ -25,10 +25,14 @@ Library           Selenium2Library
     click element    xpath=//label[@for="servicesIds3"]
 
 !record_project_name
-    click element    xpath=//img[@class="sound-icon"]
+    click element    xpath=//span[@class="sound-icon"]
     click element    xpath=//span[text()="Enregistrer"]
     sleep    5
     click element    xpath=//span[@class="stop pull-left"]
 
 !assert_insert
     Page should contain    ${testName}    ${testDesc}
+
+!assert_error
+    [Arguments]    ${message}
+    page should contain    ${message}

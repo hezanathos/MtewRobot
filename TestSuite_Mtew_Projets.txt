@@ -9,7 +9,7 @@ Mtew_Projets_RightInsert
     connection_log
     access_project_panel
     access_add_project
-    assert_url    http://10.0.2.2:8080/M-tew/projects
+    assert_url    http://10.0.2.2:8080/M-tew/projects/add
     fill_form_add
     submit_form_add
     assert_url    http://10.0.2.2:8080/M-tew/projets
@@ -21,7 +21,8 @@ Mtew_Projets_WrongInsert
     connection_log
     access_project_panel
     access_add_project
-    assert_url    http://10.0.2.2:8080/M-tew/projects
+    assert_url    http://10.0.2.2:8080/M-tew/projects/add
     submit_form_add
-    assert_url    http://10.0.2.2:8080/M-tew/
+    assert_url    http://10.0.2.2:8080/M-tew/projects/add
+    assert_error    Le nom du projet doit être renseigné
     [Teardown]    close all browsers
