@@ -1,3 +1,5 @@
 #Exclusion du fichier de conf pour la connexion, l'usage du profil
 # etant spécifique a chaque machine
 Conf/conf_Mtew_Connexion.txt
+conf_Mtew_Connexion.txt
+
