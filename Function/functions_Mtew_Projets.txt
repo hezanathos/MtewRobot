@@ -1,5 +1,5 @@
 *** Settings ***
-Resource          ../PageObject/pageObjects_Mtew_Projets.txt
+Resource          ../Page_Object/pageObjects_Mtew_Projets.txt
 
 *** Keywords ***
 accessProjectPanel

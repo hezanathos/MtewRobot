@@ -1,0 +1,24 @@
+*** Settings ***
+Resource          ../Page_Object/pageobject_connection_quizz.txt
+
+*** Keywords ***
+aller_quizz
+    !click_quizz
+
+acces_crea_quizz
+    !click_quizz
+
+form_nom_quizz
+    !projet_quizz
+    !nom_quizz
+    !sujet_quizz
+
+form_questions_quizz
+    !question_quizz
+    !reponse1
+    !reponse2
+    !reponse_correct
+    !explication
+
+validation_quizz
+    !validation_quizz

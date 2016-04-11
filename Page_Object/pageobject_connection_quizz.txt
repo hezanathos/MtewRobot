@@ -1,0 +1,14 @@
+*** Settings ***
+Resource          ../Conf/conf_connection_quizz.txt
+Library           Selenium2Library
+
+*** Keywords ***
+!click_quizz
+    Wait Until Page Contains Element    id=quizMenuItem
+    click element    quizMenuItem
+
+!projet_quizz
+
+!nom_quizz
+
+!sujet_quizz

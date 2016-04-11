@@ -1,11 +1,12 @@
 *** Settings ***
-Resource          functions/functions_Mtew_Login.txt
-Resource          functions/functions_Mtew_Projets.txt
+Suite Teardown    close all browsers
+Resource          Function/function_connection.txt
+Resource          Function/functions_Mtew_Projets.txt
 
 *** Test Cases ***
 Mtew_Projets_RightInsert
-    accessMtew
-    inputRightIDs
+    connection_web
+    connection_log
     accessProjectPanel
     accessAddProject
     assertURL    http://10.0.2.2:8080/M-tew/projects
@@ -16,10 +17,11 @@ Mtew_Projets_RightInsert
     [Teardown]    close all browsers
 
 Mtew_Projets_WrongInsert
-    accessMtew
-    inputRightIDs
+    connection_web
+    connection_log
     accessProjectPanel
     accessAddProject
     assertURL    http://10.0.2.2:8080/M-tew/projects
     submitFormAdd
     assertURL
+    [Teardown]    close all browsers

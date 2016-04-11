@@ -1,5 +1,5 @@
 *** Settings ***
-Resource          ../PageObject/pageobject_connection.txt
+Resource          ../Page_Object/pageobject_connection.txt
 
 *** Keywords ***
 connection_web

@@ -1,0 +1,27 @@
+*** Settings ***
+Suite Teardown    close all browsers
+Resource          Function/function_connection.txt
+Resource          Function/function_connection_quizz.txt
+
+*** Test Cases ***
+test_connection
+    connection_web
+    connection_log
+
+test_co_quizz
+    aller_quizz
+
+Test_crea_quizz
+    acces_crea_quizz
+    form_nom_quizz
+    form_questions_quizz
+    validation_quizz
+
+Test_created_quizz
+
+test_del_quizz
+
+test_deco_quizz
+
+test_deconnection
+    deconnection_log

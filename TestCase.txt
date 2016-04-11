@@ -1,4 +1,5 @@
 *** Settings ***
+Suite Teardown    close all browsers
 Resource          Function/function_connection.txt
 
 *** Test Cases ***
