@@ -1,0 +1,10 @@
+*** Settings ***
+Resource          Function/function_connection.txt
+
+*** Test Cases ***
+test_connection
+    connection_web
+    connection_log
+
+test_deconnection
+    deconnection_log

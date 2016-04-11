@@ -1,0 +1,15 @@
+*** Settings ***
+Resource          ../PageObject/pageobject_connection.txt
+
+*** Keywords ***
+connection_web
+    !aller sur le net
+
+connection_log
+    !entrer_id
+    !entrer_mdp
+    !click_connecter
+
+deconnection_log
+    !click_profil
+    !click_deconnection_bt
