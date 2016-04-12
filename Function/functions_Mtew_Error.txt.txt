@@ -1,0 +1,7 @@
+*** Settings ***
+Resource          ../Page_Object/pageObjects_Mtew_Error.txt.txt
+
+*** Keywords ***
+assert_error
+    [Arguments]    ${key}    ${fichier}
+    !assert_error    ${key}    ${fichier}

@@ -34,10 +34,6 @@ Library           Selenium2Library
     wait until page contains element    xpath=//div[@class="col-md-6 pull-right"]
     Page should contain    ${testNom}    ${testDesc}
 
-!assert_error
-    [Arguments]    ${message}
-    page should contain    ${message}
-
 !click_suppr
     click element    xpath=//input[@name="delete.button"]
     wait until page contains element    xpath=//span[text()="Ok"]
