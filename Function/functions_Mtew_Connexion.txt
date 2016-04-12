@@ -17,3 +17,7 @@ deconnection_log
 assert_url
     [Arguments]    ${url}
     !assert_url    ${url}
+
+bad_connection
+    !entrer_mauvais_ids
+    !click_connecter

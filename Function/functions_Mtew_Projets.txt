@@ -44,3 +44,11 @@ acces_sondage
 
 acces_question
     !acces_question
+
+input_filtre_nom
+    [Arguments]    ${bool}
+    !input_filtre_nom    ${bool}
+
+input_filtre_desc
+    [Arguments]    ${bool}
+    !input_filtre_desc    ${bool}

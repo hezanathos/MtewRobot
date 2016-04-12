@@ -38,6 +38,19 @@ Mtew_Projets_Services
     acces_question
     assert_presence    0
 
+Mtew_Projets_Filtres
+    connection_web
+    connection_log
+    access_project_panel
+    input_filtre_nom    1
+    assert_presence    1
+    input_filtre_nom    0
+    assert_presence    0
+    input_filtre_desc    1
+    assert_presence    1
+    input_filtre_desc    0
+    assert_presence    0
+
 Mtew_Projets_WrongDelete
     connection_web
     connection_log
