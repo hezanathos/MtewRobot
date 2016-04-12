@@ -9,5 +9,6 @@ Creation_Admin
     access_admin
 
 Tech_admin_Profile_Test
+    acces_admintech
 
 Destruction_Admin
