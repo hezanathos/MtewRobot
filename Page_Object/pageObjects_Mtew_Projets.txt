@@ -37,3 +37,11 @@ Library           Selenium2Library
 !assert_error
     [Arguments]    ${message}
     page should contain    ${message}
+
+!click_suppr
+    click element    xpath=//input[@name="delete.button"]
+
+!check_box
+    wait until page contains element    xpath=//table[@id="projectTable"]//tr[contains(text(),${testNom})]//td[@class="checkboxCell"]//div//input[@name="projectsIds"]
+    sleep    2
+    click element    xpath=//table[@id="projectTable"]//tr[contains(text(),${testNom})]//td[@class="checkboxCell"]//div//input[@name="projectsIds"]
