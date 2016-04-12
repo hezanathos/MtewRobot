@@ -6,7 +6,7 @@ aller_quizz
     !click_quizz
 
 acces_crea_quizz
-    !click_quizz
+    !click_ajout_quizz
 
 form_nom_quizz
     !projet_quizz

@@ -1,0 +1,14 @@
+*** Settings ***
+Suite Teardown    close all browsers
+Resource          Function/functions_Mtew_Connexion.txt
+Resource          Function/functions_Mtew_Quizz.txt
+
+*** Test Cases ***
+Mtew_Quizz_Create&Delete
+    connection_web
+    connection_log
+    aller_quizz
+    acces_crea_quizz
+    form_nom_quizz
+    form_questions_quizz
+    validation_quizz
