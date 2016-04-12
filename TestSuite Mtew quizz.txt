@@ -13,3 +13,31 @@ Mtew_Quizz_Create&Delete
     form_questions_quizz
     validation_quizz
     suppr_recent_quizz
+
+Mtew_Quizz_Create_voir_Delete
+    connection_web
+    connection_log
+    aller_quizz
+    acces_crea_quizz
+    form_nom_quizz
+    form_questions_quizz
+    validation_quizz
+    aller_voir_quizz
+    retour_voir_quizz
+    suppr_recent_quizz
+    sleep    10
+
+Mtew_Quizz_Create_change_Delete
+    connection_web
+    connection_log
+    aller_quizz
+    acces_crea_quizz
+    form_nom_quizz
+    form_questions_quizz
+    validation_quizz
+    aller_modifier_quizz
+    add_question_quizz
+    retour_modifier_quizz
+    suppr_recent_quizz
+
+Mtew_Quizz_Create_addQuestion_Delete

@@ -48,9 +48,26 @@ Library           Selenium2Library
     click element    xpath=//input[@value="Sauvegarder"]
 
 !click_choix_plus_recent_quizz
-    wait until page contains element    xpath=//input[@type="checkbox"]
-    click element    xpath=//input[@type="checkbox"]
+    wait until page contains element    xpath=//table[@class="table table-bordered table-hover"]//tr[contains(text(),${nom_quizz})]//td[@class="checkboxCell"]//div//label
+    click element    xpath=//table[@class="table table-bordered table-hover"]//tr[contains(text(),${nom_quizz})]//td[@class="checkboxCell"]//div//label
 
 !click_suppr_quizz
     wait until page contains element    xpath=//input[@title="Supprimer"]
     click element    xpath=//input[@title="Supprimer"]
+
+!click_voir_current
+    wait until page contains element    xpath=//table[@class="table table-bordered table-hover"]//tr[contains(text(),${nom_quizz})]//td[@class="bordentete nowrap"]//a
+    click element    xpath=//table[@class="table table-bordered table-hover"]//tr[contains(text(),${nom_quizz})]//td[@class="bordentete nowrap"]//a
+
+!click_retour_voir_quizz
+    wait until page contains element    xpath=//input[@title="Retour"]
+    click element    xpath=//input[@title="Retour"]
+
+!aller_modifier_quizz
+    wait until page contains element    xpath=//table[@class="table table-bordered table-hover"]//tr[contains(text(),${nom_quizz})]//td[@class="bordentete nowrap"]//a[@href="/M-tew/quiz/update?quiz"]
+    click element    xpath=//table[@class="table table-bordered table-hover"]//tr[contains(text(),${nom_quizz})]//td[@class="bordentete nowrap"]//a[@href="/M-tew/quiz/update?quiz"]
+
+!click_suppr_ok_quizz
+    wait until page contains element    xpath=//span[text()="Ok"]
+    click element    xpath=//span[text()="Ok"]
+    sleep    5
