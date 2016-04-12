@@ -2,5 +2,5 @@
 Resource          ../Page_Object/pageObjects_Mtew_Admin.txt
 
 *** Keywords ***
-!access_admin
-    pageObjects Mtew Admin.!access_admin
+access_admin
+    !access_admin

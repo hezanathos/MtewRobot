@@ -6,4 +6,4 @@ Resource          Function/functions_Mtew_Admin.txt
 test_creation_admin
     connection_web
     connection_log
-    functions Mtew Admin.!access_admin
+    access_admin

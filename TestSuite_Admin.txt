@@ -1,9 +1,13 @@
 *** Settings ***
 Resource          Function/functions_Mtew_Connexion.txt
+Resource          Function/functions_Mtew_Admin.txt
 
 *** Test Cases ***
-Creation_User
+Creation_Admin
     connection_web
     connection_log
+    access_admin
 
-Destruction_User
+Tech_admin_Profile_Test
+
+Destruction_Admin
