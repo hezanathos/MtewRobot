@@ -40,8 +40,30 @@ Library           Selenium2Library
 
 !click_suppr
     click element    xpath=//input[@name="delete.button"]
+    wait until page contains element    xpath=//span[text()="Ok"]
+    click element    xpath=//span[text()="Ok"]
 
 !check_box
-    wait until page contains element    xpath=//table[@id="projectTable"]//tr[contains(text(),${testNom})]//td[@class="checkboxCell"]//div//input[@name="projectsIds"]
-    sleep    2
-    click element    xpath=//table[@id="projectTable"]//tr[contains(text(),${testNom})]//td[@class="checkboxCell"]//div//input[@name="projectsIds"]
+    wait until page contains element    xpath=//table[@id="projectTable"]//tr[contains(text(),${testNom})]//td[@class="checkboxCell"]//div//label
+    click element    xpath=//table[@id="projectTable"]//tr[contains(text(),${testNom})]//td[@class="checkboxCell"]//div//label
+
+!acces_QCM
+    wait until page contains element    id=quizMenuItem
+    click element    xpath=//li[@id="quizMenuItem"]//a[text()="QCM"]
+
+!assert_presence
+    [Arguments]    ${present}
+    run keyword if    ${present}==1    page should contain    ${testNom}
+    ...    ELSE    page should not contain    ${testNom}
+
+!acces_message
+    wait until page contains element    id=smsMenuItem
+    click element    xpath=//li[@id="smsMenuItem"]//a[text()="Message"]
+
+!acces_sondage
+    wait until page contains element    id=surveyMenuItem
+    click element    xpath=//li[@id="surveyMenuItem"]//a[text()="Sondage"]
+
+!acces_question
+    wait until page contains element    id=kisaitooMenuItem
+    click element    xpath=//li[@id="kisaitooMenuItem"]//a//span[text()="Question/Réponse"]

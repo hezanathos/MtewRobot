@@ -28,3 +28,19 @@ click_suppr
 
 check_box
     !check_box
+
+acces_QCM
+    !acces_QCM
+
+assert_presence
+    [Arguments]    ${present}
+    !assert_presence    ${present}
+
+acces_message
+    !acces_message
+
+acces_sondage
+    !acces_sondage
+
+acces_question
+    !acces_question
