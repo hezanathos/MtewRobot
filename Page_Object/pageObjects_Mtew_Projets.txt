@@ -67,3 +67,17 @@ Library           Selenium2Library
 !acces_question
     wait until page contains element    id=kisaitooMenuItem
     click element    xpath=//li[@id="kisaitooMenuItem"]//a//span[text()="Question/Réponse"]
+
+!input_filtre_nom
+    [Arguments]    ${bool}
+    input text    id=description    ${empty}
+    run keyword if    ${bool}==1    input text    id=name    ${testNom}
+    ...    ELSE    input text    id=name    azer
+    click element    xpath=//input[@value="Rechercher"]
+
+!input_filtre_desc
+    [Arguments]    ${bool}
+    input text    id=name    ${empty}
+    run keyword if    ${bool}==1    input text    id=description    ${testDesc}
+    ...    ELSE    input text    id=description    azer
+    click element    xpath=//input[@value="Rechercher"]

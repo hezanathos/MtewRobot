@@ -1,5 +1,3 @@
 *** Settings ***
-Variables         $Tempo
 
 *** Variables ***
-${Tempo}          ${EMPTY}

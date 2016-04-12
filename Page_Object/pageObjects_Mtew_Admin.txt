@@ -5,6 +5,13 @@ Library           Selenium2Library
 *** Keywords ***
 !access_admin
     wait until page contains element    id=administrationMenuItem
-    click element    Administration
-    sleep    1
-    click element    projectAdminSubMenuItem
+    click element    xpath=//li[@id="administrationMenuItem"]//a[@class="dropdown-toggle"]
+    wait until page contains element    id=technicalAdminSubMenuItem
+    click element    id=technicalAdminSubMenuItem
+
+!access_admin_tech
+    wait until page contains element    id=administrationMenuItem
+    click element    xpath=//li[@id="administrationMenuItem"]//a[@class="dropdown-toggle"]
+    wait until page contains element    id=projectsSubMenuItem
+    click element    id=projectAdminSubMenuItem
+

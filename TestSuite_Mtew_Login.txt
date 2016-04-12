@@ -7,3 +7,8 @@ test_connection&Deconnection
     connection_web
     connection_log
     deconnection_log
+
+test_connectionMauvaisIDs
+    connection_web
+    bad_connection
+    !assert_url    http://10.0.2.2:8080/M-tew/signin

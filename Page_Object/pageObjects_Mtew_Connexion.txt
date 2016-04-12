@@ -26,3 +26,7 @@ Library           Selenium2Library
 !assert_url
     [Arguments]    ${url}
     location should be    ${url}
+
+!entrer_mauvais_ids
+    Input Text    sigin    azer
+    input text    inputPassword    azer
