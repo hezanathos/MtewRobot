@@ -19,10 +19,6 @@ submit_form_add
 assert_insert
     !assert_insert
 
-assert_error
-    [Arguments]    ${message}
-    !assert_error    ${message}
-
 click_suppr
     !click_suppr
 

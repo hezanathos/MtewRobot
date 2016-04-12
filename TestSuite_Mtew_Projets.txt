@@ -2,6 +2,8 @@
 Suite Teardown    close all browsers
 Resource          Function/functions_Mtew_Connexion.txt
 Resource          Function/functions_Mtew_Projets.txt
+Library           Scripts/scriptEssai.py
+Resource          Function/functions_Mtew_Error.txt.txt
 
 *** Test Cases ***
 Mtew_Projets_RightInsert
@@ -23,7 +25,7 @@ Mtew_Projets_WrongInsert
     assert_url    http://10.0.2.2:8080/M-tew/projects/add
     submit_form_add
     assert_url    http://10.0.2.2:8080/M-tew/projects/add
-    assert_error    ${errorNoName}
+    assert_error    ${keyNameEmpty}    ${fichierFR}
     [Teardown]    close all browsers
 
 Mtew_Projets_Services
@@ -58,7 +60,6 @@ Mtew_Projets_WrongDelete
     assert_url    http://10.0.2.2:8080/M-tew/projects
     click_suppr
     assert_url    http://10.0.2.2:8080/M-tew/projects
-    assert_error    ${errorNoProjectSelected}
     [Teardown]    close all browsers
 
 Mtew_Projets_RightDelete
@@ -69,3 +70,8 @@ Mtew_Projets_RightDelete
     check_box
     click_suppr
     [Teardown]    close all browsers
+
+testLibEssai
+    Keyword Bonjour
+    keyword repete    connard
+    keyword add    7    6
