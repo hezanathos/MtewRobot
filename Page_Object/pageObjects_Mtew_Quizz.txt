@@ -5,10 +5,29 @@ Library           Selenium2Library
 *** Keywords ***
 !click_quizz
     Wait Until Page Contains Element    id=quizMenuItem
-    click element    quizMenuItem
+    click element    xpath=//a[text()="QCM"]
 
 !projet_quizz
+    Wait Until Page Contains Element    projects
+    select from list    projects    TestDev
 
 !nom_quizz
+    Wait Until Page Contains Element    quizname
+    input text    quizname    ${nom_quizz}
+    sleep    3
 
 !sujet_quizz
+
+!question_quizz
+
+!reponse1
+
+!reponse2
+
+!reponse_correct
+
+!explication
+
+!click_ajout_quizz
+    Wait Until Page Contains Element    xpath=//a[@href="/M-tew/quiz/add?project_id=1"]
+    click element    xpath=//a[@href="/M-tew/quiz/add?project_id=1"]

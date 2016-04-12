@@ -1,3 +1,4 @@
 *** Variables ***
 ${id}             Techadmin
 ${mdp}            12345678
+${nom_quizz}      test_quizz
