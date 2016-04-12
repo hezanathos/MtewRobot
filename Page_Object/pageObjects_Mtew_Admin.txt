@@ -4,5 +4,7 @@ Library           Selenium2Library
 
 *** Keywords ***
 !access_admin
-    click element    link=Administration
-    sleep    10
+    wait until page contains element    id=administrationMenuItem
+    click element    Administration
+    sleep    1
+    click element    projectAdminSubMenuItem

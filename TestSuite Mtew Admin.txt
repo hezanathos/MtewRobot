@@ -1,9 +1,0 @@
-*** Settings ***
-Resource          Function/functions_Mtew_Connexion.txt
-Resource          Function/functions_Mtew_Admin.txt
-
-*** Test Cases ***
-test_creation_admin
-    connection_web
-    connection_log
-    access_admin
