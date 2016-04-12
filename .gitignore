@@ -2,4 +2,5 @@
 # etant spécifique a chaque machine
 Conf/conf_Mtew_Connexion.txt
 conf_Mtew_Connexion.txt
-
+Page_Object/pageObjects_Mtew_Connexion.txt
+pageObjects_Mtew_Connexion.txt
