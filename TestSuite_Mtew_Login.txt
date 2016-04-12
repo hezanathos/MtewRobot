@@ -3,9 +3,7 @@ Suite Teardown    close all browsers
 Resource          Function/functions_Mtew_Connexion.txt
 
 *** Test Cases ***
-test_connection
+test_connection&Deconnection
     connection_web
     connection_log
-
-test_deconnection
     deconnection_log
