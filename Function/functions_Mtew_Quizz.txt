@@ -15,10 +15,14 @@ form_nom_quizz
 
 form_questions_quizz
     !question_quizz
-    !reponse1
-    !reponse2
-    !reponse_correct
-    !explication
+    !reponse1_quizz
+    !reponse2_quizz
+    !reponse_correct_quizz
+    !explication_quizz
 
 validation_quizz
     !validation_quizz
+
+suppr_recent_quizz
+    !click_choix_plus_recent_quizz
+    !click_suppr_quizz

@@ -12,3 +12,4 @@ Mtew_Quizz_Create&Delete
     form_nom_quizz
     form_questions_quizz
     validation_quizz
+    suppr_recent_quizz

@@ -1,2 +1,4 @@
 *** Variables ***
-${mdp}            12345678
+${nom_quizz}      test_quizz
+${sujet_quizz}    Test creation Quizz
+${right_radio_button}    answerRadio11

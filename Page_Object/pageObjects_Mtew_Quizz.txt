@@ -14,20 +14,43 @@ Library           Selenium2Library
 !nom_quizz
     Wait Until Page Contains Element    quizname
     input text    quizname    ${nom_quizz}
-    sleep    3
 
 !sujet_quizz
+    Wait Until Page Contains Element    description
+    input text    description    ${sujet_quizz}
 
 !question_quizz
+    Wait Until Page Contains Element    quizItems0.question
+    input text    quizItems0.question    test?
 
-!reponse1
+!reponse1_quizz
+    Wait Until Page Contains Element    xpath=//input[@title="Réponse 1"]
+    input text    xpath=//input[@title="Réponse 1"]    oui
 
-!reponse2
+!reponse2_quizz
+    Wait Until Page Contains Element    xpath=//input[@title="Réponse 2"]
+    input text    xpath=//input[@title="Réponse 2"]    non
 
-!reponse_correct
+!reponse_correct_quizz
+    Wait Until Page Contains Element    xpath=//label[@for="${right_radio_button}"]
+    click element    xpath=//label[@for="${right_radio_button}"]
 
-!explication
+!explication_quizz
+    Wait Until Page Contains Element    explanation
+    input text    explanation    test_oui
 
 !click_ajout_quizz
     Wait Until Page Contains Element    xpath=//a[@href="/M-tew/quiz/add?project_id=1"]
     click element    xpath=//a[@href="/M-tew/quiz/add?project_id=1"]
+
+!validation_quizz
+    wait until page contains element    xpath=//input[@value="Sauvegarder"]
+    click element    xpath=//input[@value="Sauvegarder"]
+
+!click_choix_plus_recent_quizz
+    wait until page contains element    xpath=//input[@type="checkbox"]
+    click element    xpath=//input[@type="checkbox"]
+
+!click_suppr_quizz
+    wait until page contains element    xpath=//input[@title="Supprimer"]
+    click element    xpath=//input[@title="Supprimer"]
