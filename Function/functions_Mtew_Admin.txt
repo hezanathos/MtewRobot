@@ -4,6 +4,25 @@ Resource          ../Page_Object/pageObjects_Mtew_Admin.txt
 *** Keywords ***
 access_admin
     !access_admin
+    !access_gestion_user
+    !add_user
+    !input_lastname
+    !input_firstname
+    !input_ident
+    !input_MdP
+    !input_confirmMdP
+    !input_telephone
+    !input_mobile
+    !input_mail
+    !record_admin
+
+Suppr_admin
+    !access_admin
+    !access_gestion_user
+    !sup_user
+
 
 acces_admin_tech
-    !access_admin_tech
+    !acces_admin_tech
+
+

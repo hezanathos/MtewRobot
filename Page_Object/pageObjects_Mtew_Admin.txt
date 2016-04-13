@@ -6,13 +6,53 @@ Library           Selenium2Library
 !access_admin
     wait until page contains element    id=administrationMenuItem
     click element    xpath=//li[@id="administrationMenuItem"]//a[@class="dropdown-toggle"]
+
+!access_gestion_user
     wait until page contains element    id=technicalAdminSubMenuItem
     click element    id=technicalAdminSubMenuItem
 
+<<<<<<< HEAD
+!add_user
+    wait until page contains element    xpath=//span[text()="Ajouter un administrateur technique"]
+    click element    xpath=//span[text()="Ajouter un administrateur technique"]
+    sleep    2
+
+!input_lastname
+    input text    lastname    ${NomAdmin}
+
+!input_firstname
+    input text    firstname    ${PrenomAdmin}
+
+!input_ident
+    input text    login    ${IdentifiantAdmin}
+
+!input_MdP
+    input text    password    ${MotdePasseAdmin}
+
+!input_confirmMdP
+    input text    passwordConfirmed    ${ConfirmMotdePasseAdmin}
+
+!input_telephone
+    input text    phone    ${TelephoneAdmin}
+
+!input_mobile
+    input text    mobilenumber    ${MobileAdmin}
+
+!input_mail
+    input text    email    ${MailAdmin}
+
+!record_admin
+    click element    name=save.button
+
+!sup_user
+    wait until page contains element    xpath=//table[@class="table table-bordered table-hover push-top-2"]//tr[contains(text(),${TestAdmin})]//td[contains(text(),${TestAdmin})]//label
+    sleep    2
+    click element    xpath=//table[@class="table table-bordered table-hover push-top-2"]//tr[contains(text(),${TestAdmin})]//td[contains(text(),${TestAdmin})]//label
+=======
 !access_admin_tech
     wait until page contains element    id=administrationMenuItem
     click element    xpath=//li[@id="administrationMenuItem"]//a[@class="dropdown-toggle"]
     wait until page contains element    id=projectsSubMenuItem
     click element    id=projectAdminSubMenuItem
-    wait until page contains element    id=ProjectAdminListForm
-    click element    xpath=//span[text()="Ajouter un administrateur de projet"]
+
+>>>>>>> 5f3d9e6cd15381a9d2e5c0c6eda12e627c720f02
