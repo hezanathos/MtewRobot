@@ -64,10 +64,14 @@ Library           Selenium2Library
     click element    xpath=//input[@title="Retour"]
 
 !aller_modifier_quizz
-    wait until page contains element    xpath=//table[@class="table table-bordered table-hover"]//tr[contains(text(),${nom_quizz})]//td[@class="bordentete nowrap"]//a[@href="/M-tew/quiz/update?quiz"]
-    click element    xpath=//table[@class="table table-bordered table-hover"]//tr[contains(text(),${nom_quizz})]//td[@class="bordentete nowrap"]//a[@href="/M-tew/quiz/update?quiz"]
+    wait until page contains element    xpath=//table[@class="table table-bordered table-hover"]//tr[contains(text(),${nom_quizz})]//td[@class="bordentete nowrap"]//a[2]
+    click element    xpath=//table[@class="table table-bordered table-hover"]//tr[contains(text(),${nom_quizz})]//td[@class="bordentete nowrap"]//a[2]
 
 !click_suppr_ok_quizz
     wait until page contains element    xpath=//span[text()="Ok"]
     click element    xpath=//span[text()="Ok"]
-    sleep    5
+
+!click_addQuestion_quizz
+    wait until page contains element    xpath=//li[@id="addQuestionBtn"]//a
+    click element    xpath=//li[@id="addQuestionBtn"]//a
+    sleep    1
