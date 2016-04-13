@@ -24,12 +24,6 @@ Library           Selenium2Library
     click element    xpath=//label[@for="servicesIds1"]
     click element    xpath=//label[@for="servicesIds3"]
 
-!record_project_name
-    click element    xpath=//span[@class="sound-icon"]
-    click element    xpath=//span[text()="Enregistrer"]
-    sleep    10
-    click element    xpath=//span[@class="stop pull-left"]
-
 !assert_insert
     wait until page contains element    xpath=//div[@class="col-md-6 pull-right"]
     Page should contain    ${testNom}    ${testDesc}
