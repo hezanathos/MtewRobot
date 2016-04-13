@@ -3,12 +3,12 @@ Suite Teardown    close all browsers
 Resource          Function/functions_Mtew_Connexion.txt
 
 *** Test Cases ***
-test_connection&Deconnection
+Mtew_Login_RightIDs
     connection_web
     connection_log
     deconnection_log
 
-test_connectionMauvaisIDs
+Mtew_Login_WrongIDs
     connection_web
     bad_connection
     !assert_url    http://10.0.2.2:8080/M-tew/signin
