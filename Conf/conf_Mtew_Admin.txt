@@ -1,3 +1,12 @@
 *** Settings ***
 
 *** Variables ***
+${NomAdmin}       Bonaparte
+${PrenomAdmin}    Napoleon
+${IdentifiantAdmin}    Empereur
+${MotdePasseAdmin}    Empire6-
+${ConfirmMotdePasseAdmin}    Empire6-
+${TelephoneAdmin}    01-23-45-67-89
+${MobileAdmin}    06-12-34-56-78
+${MailAdmin}      napoleon.bonaparte@orange.fr
+${TestAdmin}      Bonaparte

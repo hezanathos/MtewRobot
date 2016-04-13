@@ -12,3 +12,6 @@ Tech_admin_Profile_Test
     acces_admintech
 
 Destruction_Admin
+    connection_web
+    connection_log
+    suppr_admin
