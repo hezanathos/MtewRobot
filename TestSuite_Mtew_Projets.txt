@@ -58,6 +58,10 @@ Mtew_Projets_Filtres
     assert_presence    0
     [Teardown]    close all browsers
 
+Mtew_Projets_RightEdit
+
+Mtew_Projets_WrongEdit
+
 Mtew_Projets_WrongDelete
     [Tags]    projects
     connection_web
