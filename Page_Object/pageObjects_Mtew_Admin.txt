@@ -54,4 +54,4 @@ Library           Selenium2Library
     sleep    2
     click element    xpath=//table[@class="table table-bordered table-hover push-top-2"]//tr[contains(text(),${TestAdmin})]//td[contains(text(),${TestAdmin})]//label
     click element    name=delete.button
-    click element    xpath=//@class=button class='ui-button ui-widget ui-state-default ui-corner-all ui--button-text-only type="button" role="button"
+    click element    xpath=//span [text()="Ok"]
