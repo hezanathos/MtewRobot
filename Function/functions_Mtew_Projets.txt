@@ -10,7 +10,7 @@ access_add_project
 
 fill_form_add
     !input_name
-    !record_project_name
+    !upload_record_name
     !input_services
 
 submit_form_add

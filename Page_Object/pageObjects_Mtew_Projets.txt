@@ -77,3 +77,7 @@ Library           Selenium2Library
     run keyword if    ${bool}==1    input text    id=description    ${testDesc}
     ...    ELSE    input text    id=description    azer
     click element    xpath=//input[@value="Rechercher"]
+
+!upload_record_name
+    click element    xpath=//span[@class="sound-icon"]
+    choose file    xpath=//input[@type="file"]    ${recordLocation}

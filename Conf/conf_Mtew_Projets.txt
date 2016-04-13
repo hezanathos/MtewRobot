@@ -1,3 +1,4 @@
 *** Variables ***
 ${testNom}        Insert
 ${testDesc}       testCase insertion valide
+${recordLocation}    /home/olps/Bureau/MtewRobot/Ressources/recordProjectName.wav
