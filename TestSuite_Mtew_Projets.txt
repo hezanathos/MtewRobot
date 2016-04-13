@@ -14,7 +14,6 @@ Mtew_Projets_RightInsert
     assert_url    projects/add
     fill_form_add
     submit_form_add
-    assert_insert
     [Teardown]    close all browsers
 
 Mtew_Projets_WrongInsert
@@ -23,10 +22,17 @@ Mtew_Projets_WrongInsert
     connection_log
     access_project_panel
     access_add_project
+    lang_fr
     assert_url    projects/add
     submit_form_add
     assert_url    projects/add
     assert_error    ${keyNameEmpty}    ${fichierFR}
+    lang_eng
+    access_project_panel
+    access_add_project
+    submit_form_add
+    assert_url    projects/add
+    assert_error    ${keyNameEmpty}    ${fichierEN}
     [Teardown]    close all browsers
 
 Mtew_Projets_Services
@@ -59,8 +65,39 @@ Mtew_Projets_Filtres
     [Teardown]    close all browsers
 
 Mtew_Projets_RightEdit
+    [Tags]    projects    progress
+    connection_web
+    connection_log
+    access_project_panel
+    assert_url    projects
+    acces_modif
+    [Teardown]    close all browsers
 
 Mtew_Projets_WrongEdit
+    [Tags]    projects    progress
+    connection_web
+    connection_log
+    access_project_panel
+    assert_url    projects
+    acces_modif
+    nullify_name
+    sleep    5
+    submit_form_add
+    assert_error    ${keyNameEmpty}    ${fichierFR}
+    fill_form_add
+    submit_form_add
+    assert_error    ${keyServicesEmpty}    ${fichierFR}
+    lang_eng
+    access_project_panel
+    assert_url    projects?locale=en
+    acces_modif
+    nullify_name
+    submit_form_add
+    assert_error    ${keyNameEmpty}    ${fichierEN}
+    fill_form_add
+    submit_form_add
+    assert_error    ${keyServicesEmpty}    ${fichierEN}
+    [Teardown]    close all browsers
 
 Mtew_Projets_WrongDelete
     [Tags]    projects
@@ -71,6 +108,12 @@ Mtew_Projets_WrongDelete
     click_suppr
     assert_url    projects
     assert_error    ${keyNoProjectSelected}    ${fichierFR}
+    access_project_panel
+    lang_eng
+    assert_url    projects?locale=en
+    click_suppr
+    assert_url    projects?locale=en
+    assert_error    ${keyNoProjectSelected}    ${fichierEN}
     [Teardown]    close all browsers
 
 Mtew_Projets_RightDelete

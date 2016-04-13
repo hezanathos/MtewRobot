@@ -1,3 +1,4 @@
 *** Variables ***
 ${testNom}        Insert
 ${testDesc}       testCase insertion valide
+${testDescEdit}    testCase edition valide

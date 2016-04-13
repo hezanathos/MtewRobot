@@ -1,5 +1,4 @@
 *** Settings ***
-Resource          ../Conf/conf_Mtew_Quizz.txt
 Library           Selenium2Library
 
 *** Keywords ***
