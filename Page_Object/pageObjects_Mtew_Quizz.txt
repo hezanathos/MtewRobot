@@ -75,3 +75,37 @@ Library           Selenium2Library
     wait until page contains element    xpath=//li[@id="addQuestionBtn"]//a
     click element    xpath=//li[@id="addQuestionBtn"]//a
     sleep    1
+
+!explication2_quizz
+    Wait Until Page Contains Element    //div[@id="Q2-question"]//input[@id="explanation"]
+    input text    //div[@id="Q2-question"]//input[@id="explanation"]    test_oui
+
+!reponse2_correct_quizz
+    Wait Until Page Contains Element    xpath=//div[@id="Q2-question"]//label[@for="${right_radio_button2}"]
+    click element    xpath=//div[@id="Q2-question"]//label[@for="${right_radio_button2}"]
+
+!reponse2_2_quizz
+    Wait Until Page Contains Element    xpath=//div[@id="Q2-question"]//input[@title="Réponse 2"]
+    input text    xpath=//div[@id="Q2-question"]//input[@title="Réponse 2"]    non
+
+!reponse2_1_quizz
+    Wait Until Page Contains Element    xpath=//div[@id="Q2-question"]//input[@title="Réponse 1"]
+    input text    xpath=//div[@id="Q2-question"]//input[@title="Réponse 1"]    oui
+
+!question2_quizz
+    Wait Until Page Contains Element    xpath=//div[@id="Q2-question"]//input[@id="quizItems0.question"]
+    input text    xpath=//div[@id="Q2-question"]//input[@id="quizItems0.question"]    test?
+
+!click_aller_publier_quizz
+    wait until page contains element    xpath=//table[@class="table table-bordered table-hover"]//tr[contains(text(),${nom_quizz})]//td[@class="bordentete nowrap"]//a[3]
+    click element    xpath=//table[@class="table table-bordered table-hover"]//tr[contains(text(),${nom_quizz})]//td[@class="bordentete nowrap"]//a[3]
+
+!click_retour_publier_quizz
+    wait until page contains element    xpath=//input[@value="Annuler"]
+    click element    xpath=//input[@value="Annuler"]
+
+!click_aller_exporter_ok
+    wait until page contains element    xpath=//div[@class="form-group"]//a[2]
+    click element    xpath=//div[@class="form-group"]//a[2]
+    wait until page contains element    xpath=//button[@class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"]
+    click element    xpath=//button[@class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"]
