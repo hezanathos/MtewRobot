@@ -1,10 +1,12 @@
 *** Settings ***
 Resource          ../Conf/conf_Mtew_Connexion.txt
 Library           Selenium2Library
+Resource          ../Conf/conf_Mtew_URLs.txt
 
 *** Keywords ***
 !aller sur le net
-    open browser    url=http://10.0.2.2:8080/M-tew/signin    browser=firefox    ff_profile_dir=${profile}
+    ${tempUrl}=    catenate    SEPARATOR=    ${MtewAddress}    signin
+    open browser    url=${tempUrl}    browser=firefox    ff_profile_dir=${profile}
 
 !entrer_id
     Input Text    sigin    ${id}
@@ -25,7 +27,8 @@ Library           Selenium2Library
 
 !assert_url
     [Arguments]    ${url}
-    location should be    ${url}
+    ${tempUrl}=    catenate    SEPARATOR=    ${MtewAddress}    ${url}
+    location should be    ${tempUrl}
 
 !entrer_mauvais_ids
     Input Text    sigin    azer

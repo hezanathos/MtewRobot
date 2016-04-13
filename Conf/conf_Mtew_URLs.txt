@@ -1,0 +1,5 @@
+*** Variables ***
+${recordLocation}    /home/olps/Bureau/MtewRobot/Ressources/recordProjectName.wav    # Localisation du fichier audio test requis pour la creation d'un projet
+${propertiesDirectory}    /home/olps/Bureau/properties/    # Localisation du dossier de propriétés
+${MtewAddress}    http://10.0.2.2:8080/M-tew/    # Url d'accès à Mtew
+${tempUrl}        \    # Variable tampon utilisée pour la concaténation de l'adresse de base et d'un chemin spécifique

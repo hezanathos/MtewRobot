@@ -1,5 +1,4 @@
 *** Variables ***
-${address}        /home/olps/Bureau/properties/
 ${fichierFR}      messages_fr.properties
 ${fichierEN}      messages_fr.properties
 ${keyNameEmpty}    projects.projectNameEmpty

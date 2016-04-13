@@ -6,28 +6,31 @@ Resource          Function/functions_Mtew_Error.txt.txt
 
 *** Test Cases ***
 Mtew_Projets_RightInsert
+    [Tags]    projects
     connection_web
     connection_log
     access_project_panel
     access_add_project
-    assert_url    http://10.0.2.2:8080/M-tew/projects/add
+    assert_url    projects/add
     fill_form_add
     submit_form_add
     assert_insert
     [Teardown]    close all browsers
 
 Mtew_Projets_WrongInsert
+    [Tags]    projects
     connection_web
     connection_log
     access_project_panel
     access_add_project
-    assert_url    http://10.0.2.2:8080/M-tew/projects/add
+    assert_url    projects/add
     submit_form_add
-    assert_url    http://10.0.2.2:8080/M-tew/projects/add
+    assert_url    projects/add
     assert_error    ${keyNameEmpty}    ${fichierFR}
     [Teardown]    close all browsers
 
 Mtew_Projets_Services
+    [Tags]    projects
     connection_web
     connection_log
     acces_QCM
@@ -38,8 +41,10 @@ Mtew_Projets_Services
     assert_presence    0
     acces_question
     assert_presence    0
+    [Teardown]    close all browsers
 
 Mtew_Projets_Filtres
+    [Tags]    projects
     connection_web
     connection_log
     access_project_panel
@@ -51,22 +56,25 @@ Mtew_Projets_Filtres
     assert_presence    1
     input_filtre_desc    0
     assert_presence    0
+    [Teardown]    close all browsers
 
 Mtew_Projets_WrongDelete
+    [Tags]    projects
     connection_web
     connection_log
     access_project_panel
-    assert_url    http://10.0.2.2:8080/M-tew/projects
+    assert_url    projects
     click_suppr
-    assert_url    http://10.0.2.2:8080/M-tew/projects
+    assert_url    projects
     assert_error    ${keyNoProjectSelected}    ${fichierFR}
     [Teardown]    close all browsers
 
 Mtew_Projets_RightDelete
+    [Tags]    projects
     connection_web
     connection_log
     access_project_panel
-    assert_url    http://10.0.2.2:8080/M-tew/projects
+    assert_url    projects
     check_box
     click_suppr
     [Teardown]    close all browsers

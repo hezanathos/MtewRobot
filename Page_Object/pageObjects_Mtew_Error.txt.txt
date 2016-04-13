@@ -3,11 +3,12 @@ Resource          ../Conf/conf_Mtew_Error.txt
 Library           Selenium2Library
 Library           ../Scripts/errorMessageRetriever.py
 Library           String
+Resource          ../Conf/conf_Mtew_URLs.txt
 
 *** Keywords ***
 !assert_error
     [Arguments]    ${key}    ${fichier}
-    ${fileAddress}=    catenate    SEPARATOR=    ${address}    ${fichier}
+    ${fileAddress}=    catenate    SEPARATOR=    ${propertiesDirectory}    ${fichier}
     ${returnValue}=    Retrieve Message By Key    ${fileAddress}    ${key}
     ${returnValue}=    Decode Bytes To String    ${returnValue}    iso-8859-1
     page should contain    ${returnValue}

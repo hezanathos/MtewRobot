@@ -4,11 +4,14 @@ Resource          Function/functions_Mtew_Connexion.txt
 
 *** Test Cases ***
 Mtew_Login_RightIDs
+    [Tags]    login
     connection_web
     connection_log
+    assert_url    welcome
     deconnection_log
 
 Mtew_Login_WrongIDs
+    [Tags]    login
     connection_web
     bad_connection
-    !assert_url    http://10.0.2.2:8080/M-tew/signin
+    assert_url    signin
