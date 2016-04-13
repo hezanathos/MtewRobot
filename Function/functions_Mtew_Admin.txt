@@ -6,5 +6,4 @@ access_admin
     !access_admin
 
 acces_admin_tech
-    !acces_admin_tech
-
+    !access_admin_tech

@@ -14,4 +14,5 @@ Library           Selenium2Library
     click element    xpath=//li[@id="administrationMenuItem"]//a[@class="dropdown-toggle"]
     wait until page contains element    id=projectsSubMenuItem
     click element    id=projectAdminSubMenuItem
-
+    wait until page contains element    id=ProjectAdminListForm
+    click element    xpath=//span[text()="Ajouter un administrateur de projet"]

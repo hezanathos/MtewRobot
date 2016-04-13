@@ -1,6 +1,7 @@
 *** Settings ***
 Resource          ../Conf/conf_Mtew_Projets.txt
 Library           Selenium2Library
+Resource          ../Conf/conf_Mtew_URLs.txt
 
 *** Keywords ***
 !access_project_panel
@@ -74,4 +75,5 @@ Library           Selenium2Library
 
 !upload_record_name
     click element    xpath=//span[@class="sound-icon"]
-    choose file    xpath=//input[@type="file"]    ${recordLocation}
+    ${tempUrl}=    Catenate    SEPARATOR=    ${TestAbsoluteLocation}    ${recordLocation}
+    choose file    xpath=//input[@type="file"]    ${tempUrl}
