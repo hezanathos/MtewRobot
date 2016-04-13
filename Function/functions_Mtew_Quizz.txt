@@ -41,3 +41,19 @@ retour_modifier_quizz
 
 add_question_quizz
     !click_addQuestion_quizz
+
+form_questions2_quizz
+    !question2_quizz
+    !reponse2_1_quizz
+    !reponse2_2_quizz
+    !reponse2_correct_quizz
+    !explication2_quizz
+
+aller_publier_quizz
+    !click_aller_publier_quizz
+
+retour_publier_quizz
+    !click_retour_publier_quizz
+
+aller_exporter_ok
+    !click_aller_exporter_ok

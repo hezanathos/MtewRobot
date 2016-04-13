@@ -21,8 +21,5 @@ Suppr_admin
     !access_gestion_user
     !sup_user
 
-
 acces_admin_tech
-    !acces_admin_tech
-
-
+    !access_admin_tech
