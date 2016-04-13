@@ -35,10 +35,9 @@ retour_voir_quizz
     !click_retour_voir_quizz
 
 aller_modifier_quizz
-    wait until page contains element    \     \ \ \ <img src="/M-tew/resources/images/common/fleche_lien.gif" alt=""></img> \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Modifier \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
-    click element
     !aller_modifier_quizz
 
 retour_modifier_quizz
 
 add_question_quizz
+    !click_addQuestion_quizz
