@@ -1,0 +1,2 @@
+*** Settings ***
+Resource          ../Page_Object/pageObjects_Mtew_Admin_Error.txt

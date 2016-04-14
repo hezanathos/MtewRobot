@@ -69,4 +69,4 @@ Library           Selenium2Library
     sleep    10
 
 !input_pays
-    select from list    id=country    ${Pays}
+    select from list    country    ${Pays}
