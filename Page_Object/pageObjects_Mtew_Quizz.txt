@@ -1,5 +1,7 @@
 *** Settings ***
+Resource          ../Conf/conf_Mtew_Quizz.txt
 Library           Selenium2Library
+Library           ../Scripts/test.py
 
 *** Keywords ***
 !click_quizz
@@ -73,28 +75,35 @@ Library           Selenium2Library
 
 !click_addQuestion_quizz
     wait until page contains element    xpath=//li[@id="addQuestionBtn"]//a
+    click element    xpath=//ul[@id="tabs"]//li[last() - 1]//a
+    ${current_p}=    get text    xpath=//ul[@id="tabs"]//li[last() - 1]//a
+    ${current_q}=    get text    xpath=//ul[@id="tabs"]//li[last() - 1]//a
+    ${new_id}=    k_w    ${current_q}
+    ${new_p}=    k_p    ${current_p}
+    set Suite variable    ${suiv_q}    ${new_id}
+    set Suite variable    ${suiv_p}    ${new_p}
     click element    xpath=//li[@id="addQuestionBtn"]//a
-    sleep    1
 
 !explication2_quizz
-    Wait Until Page Contains Element    //div[@id="Q2-question"]//input[@id="explanation"]
-    input text    //div[@id="Q2-question"]//input[@id="explanation"]    test_oui
+    Wait Until Page Contains Element    //div[@id="${suiv_q}"]//input[@id="explanation"]
+    input text    //div[@id="${suiv_q}"]//input[@id="explanation"]    test_oui
 
 !reponse2_correct_quizz
-    Wait Until Page Contains Element    xpath=//div[@id="Q2-question"]//label[@for="${right_radio_button2}"]
-    click element    xpath=//div[@id="Q2-question"]//label[@for="${right_radio_button2}"]
+    Wait Until Page Contains Element    xpath=//label[@for="${suiv_p}"]
+    click element    xpath=//label[@for="${suiv_p}"]
+    comment    xpath=//div[@id="${suiv_q}"]//div[@class="col-lg-9 col-lg-offset-2 col-md-9 col-md-offset-2"]//div[@class="form-group push-top-2 clearfix"]//div[@class="row col-md-10"][@class="col-md-2"]//label
 
 !reponse2_2_quizz
-    Wait Until Page Contains Element    xpath=//div[@id="Q2-question"]//input[@title="Réponse 2"]
-    input text    xpath=//div[@id="Q2-question"]//input[@title="Réponse 2"]    non
+    Wait Until Page Contains Element    xpath=//div[@id="${suiv_q}"]//input[@title="Réponse 2"]
+    input text    xpath=//div[@id="${suiv_q}"]//input[@title="Réponse 2"]    non
 
 !reponse2_1_quizz
-    Wait Until Page Contains Element    xpath=//div[@id="Q2-question"]//input[@title="Réponse 1"]
-    input text    xpath=//div[@id="Q2-question"]//input[@title="Réponse 1"]    oui
+    Wait Until Page Contains Element    xpath=//div[@id="${suiv_q}"]//input[@title="Réponse 1"]
+    input text    xpath=//div[@id="${suiv_q}"]//input[@title="Réponse 1"]    oui
 
 !question2_quizz
-    Wait Until Page Contains Element    xpath=//div[@id="Q2-question"]//input[@id="quizItems0.question"]
-    input text    xpath=//div[@id="Q2-question"]//input[@id="quizItems0.question"]    test?
+    Wait Until Page Contains Element    xpath=//div[@id="${suiv_q}"]//input[@id="quizItems0.question"]
+    input text    xpath=//div[@id="${suiv_q}"]//input[@id="quizItems0.question"]    test?
 
 !click_aller_publier_quizz
     wait until page contains element    xpath=//table[@class="table table-bordered table-hover"]//tr[contains(text(),${nom_quizz})]//td[@class="bordentete nowrap"]//a[3]
