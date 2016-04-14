@@ -23,3 +23,4 @@ Suppr_admin
 
 acces_admin_tech
     !access_admin_tech
+    !add_admin_projet

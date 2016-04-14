@@ -10,6 +10,7 @@ Creation_Admin
 
 Tech_admin_Profile_Test
     acces_admintech
+    [Teardown]    close all browsers
 
 Destruction_Admin
     connection_web
