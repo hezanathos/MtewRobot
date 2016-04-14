@@ -9,7 +9,8 @@ acces_crea_quizz
     !click_ajout_quizz
 
 form_nom_quizz
-    !projet_quizz
+    [Arguments]    ${nomProjet}
+    !projet_quizz    ${nomProjet}
     !nom_quizz
     !sujet_quizz
 
@@ -57,3 +58,7 @@ retour_publier_quizz
 
 aller_exporter_ok
     !click_aller_exporter_ok
+
+change_projet
+    [Arguments]    ${nomProjet}
+    !click_projet    ${nomProjet}

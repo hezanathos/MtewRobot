@@ -9,7 +9,7 @@ access_add_project
     !access_add_project
 
 fill_form_add
-    !input_name
+    !input_name    ${testNom}    ${testDesc}
     !upload_record_name
     !input_services
 
@@ -48,3 +48,20 @@ input_filtre_nom
 input_filtre_desc
     [Arguments]    ${bool}
     !input_filtre_desc    ${bool}
+
+lang_eng
+    !lang_eng
+
+lang_fr
+    !lang_fr
+
+acces_modif
+    !acces_modif
+
+nullify_name
+    !nullify_name
+
+fill_form_edit
+    !input_name    ${testNomEdit}    ${testDescEdit}
+    !upload_record_name
+    !input_services
