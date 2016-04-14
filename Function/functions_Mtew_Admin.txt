@@ -11,6 +11,7 @@ access_admin
     !input_ident
     !input_MdP
     !input_confirmMdP
+    !input_pays
     !input_telephone
     !input_mobile
     !input_mail
@@ -23,4 +24,26 @@ Suppr_admin
 
 acces_admin_tech
     !access_admin_tech
+<<<<<<< HEAD
     !add_admin_projet
+=======
+
+Suppr_admin_Annule
+    !access_admin
+    !access_gestion_user
+    !sup_user_Annule
+
+Visual_admin
+    !access_admin
+    !access_gestion_user
+    sleep    10
+    !access_visual_user
+    sleep    10
+
+Modif_admin
+    !access_admin
+    !access_gestion_user
+    sleep    10
+    !access_Modif_user
+    sleep    10
+>>>>>>> 4de694df5258c5aeda615a354f63f283541f4c70
