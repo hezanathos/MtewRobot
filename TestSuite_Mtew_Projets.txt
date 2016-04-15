@@ -14,8 +14,9 @@ Mtew_Projets_RightInsert
     assert_url    projects/add
     fill_form_add
     submit_form_add
+    ${result}=    Set Variable    PASS
     [Teardown]    Run keywords    close all browsers
-    ...    AND    write_log    ${testName}    ${output}
+    ...    AND    write_log    ${testName}    ${result}
 
 Mtew_Projets_WrongInsert
     [Tags]    projects
@@ -24,9 +25,9 @@ Mtew_Projets_WrongInsert
     access_project_panel
     access_add_project
     lang_fr
-    assert_url    projects/add
+    assert_url    projects/add?locale=fr
     submit_form_add
-    assert_url    projects/add
+    assert_url    projects/add?locale=fr
     assert_error    ${keyNameEmpty}    ${fichierFR}
     lang_eng
     access_project_panel
@@ -34,13 +35,15 @@ Mtew_Projets_WrongInsert
     submit_form_add
     assert_url    projects/add
     assert_error    ${keyNameEmpty}    ${fichierEN}
+    ${result}=    Set Variable    PASS
     [Teardown]    Run keywords    close all browsers
-    ...    AND    write_log    ${testName}    ${output}
+    ...    AND    write_log    ${testName}    ${result}
 
 Mtew_Projets_Services
     [Tags]    projects
     connection_web
     connection_log
+    lang_fr
     acces_QCM
     assert_presence    1
     acces_message
@@ -49,13 +52,15 @@ Mtew_Projets_Services
     assert_presence    0
     acces_question
     assert_presence    0
+    ${result}=    Set Variable    PASS
     [Teardown]    Run keywords    close all browsers
-    ...    AND    write_log    ${testName}    ${output}
+    ...    AND    write_log    ${testName}    ${result}
 
 Mtew_Projets_Filtres
     [Tags]    projects
     connection_web
     connection_log
+    lang_fr
     access_project_panel
     input_filtre_nom    1
     assert_presence    1
@@ -65,8 +70,9 @@ Mtew_Projets_Filtres
     assert_presence    1
     input_filtre_desc    0
     assert_presence    0
+    ${result}=    Set Variable    PASS
     [Teardown]    Run keywords    close all browsers
-    ...    AND    write_log    ${testName}    ${output}
+    ...    AND    write_log    ${testName}    ${result}
 
 Mtew_Projets_RightEdit
     [Tags]    projects    progress
@@ -75,8 +81,9 @@ Mtew_Projets_RightEdit
     access_project_panel
     assert_url    projects
     acces_modif
+    ${result}=    Set Variable    PASS
     [Teardown]    Run keywords    close all browsers
-    ...    AND    write_log
+    ...    AND    write_log    ${testName}    ${result}
 
 Mtew_Projets_WrongEdit
     [Tags]    projects    progress
@@ -102,13 +109,15 @@ Mtew_Projets_WrongEdit
     fill_form_add
     submit_form_add
     assert_error    ${keyServicesEmpty}    ${fichierEN}
+    ${result}=    Set Variable    PASS
     [Teardown]    Run keywords    close all browsers
-    ...    AND    write_log
+    ...    AND    write_log    ${testName}    ${result}
 
 Mtew_Projets_WrongDelete
     [Tags]    projects
     connection_web
     connection_log
+    lang_fr
     access_project_panel
     assert_url    projects
     click_suppr
@@ -120,8 +129,9 @@ Mtew_Projets_WrongDelete
     click_suppr
     assert_url    projects?locale=en
     assert_error    ${keyNoProjectSelected}    ${fichierEN}
+    ${result}=    Set Variable    PASS
     [Teardown]    Run keywords    close all browsers
-    ...    AND    write_log
+    ...    AND    write_log    ${testName}    ${result}
 
 Mtew_Projets_RightDelete
     [Tags]    projects
@@ -131,5 +141,6 @@ Mtew_Projets_RightDelete
     assert_url    projects
     check_box
     click_suppr
+    ${result}=    Set Variable    PASS
     [Teardown]    Run keywords    close all browsers
-    ...    AND    write_log
+    ...    AND    write_log    ${testName}    ${result}
