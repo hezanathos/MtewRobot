@@ -24,9 +24,6 @@ Suppr_admin
 
 acces_admin_tech
     !access_admin_tech
-<<<<<<< HEAD
-    !add_admin_projet
-=======
 
 Suppr_admin_Annule
     !access_admin
@@ -46,4 +43,6 @@ Modif_admin
     sleep    10
     !access_Modif_user
     sleep    10
->>>>>>> 4de694df5258c5aeda615a354f63f283541f4c70
+
+acces_destinataire
+    !access_destinataire

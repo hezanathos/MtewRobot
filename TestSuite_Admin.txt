@@ -36,3 +36,11 @@ Modif_Admin
     connection_log
     Modif_admin
     [Teardown]    close all browsers
+
+Tech_destinataire_Profile_Test
+    connection_web
+    Sleep    5
+    connection_log
+    Sleep    5
+    acces_destinataire
+    [Teardown]    close all browsers

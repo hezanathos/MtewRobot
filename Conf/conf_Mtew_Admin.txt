@@ -12,3 +12,4 @@ ${MailAdmin}      napoleon.bonaparte@orange.fr
 ${TestAdmin}      Bonaparte
 ${ConfirmSup}     Ok
 ${Pays}           ${EMPTY}
+${name}           ${EMPTY}
