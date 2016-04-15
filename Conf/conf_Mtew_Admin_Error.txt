@@ -1,0 +1,9 @@
+*** Variables ***
+${fichierFR}      messages_fr.properties
+${fichierEN}      messages_en.properties
+${keyNameEmpty}    projects.projectNameEmpty
+${keyServicesEmpty}    projects.servicesEmpty
+${keyNoProjectSelected}    projects.noProjectSelectedError
+${fileAdress}     ${EMPTY}
+${returnValue}    ${EMPTY}
+${keyNameDuplicated}    projects.projectNameDuplicated

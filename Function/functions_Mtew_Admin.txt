@@ -33,7 +33,6 @@ Suppr_admin_Annule
 Visual_admin
     !access_admin
     !access_gestion_user
-    sleep    10
     !access_visual_user
     sleep    10
 

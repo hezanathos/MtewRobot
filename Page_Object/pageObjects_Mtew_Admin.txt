@@ -83,6 +83,9 @@ Library           Selenium2Library
     sleep    10
 
 !input_pays
+<<<<<<< HEAD
+    select from list    country    ${Pays}
+=======
     select from list    id=country    ${Pays}
 
 !access_destinataire
@@ -92,3 +95,4 @@ Library           Selenium2Library
     click element    id=recipientsSubMenuItem
     ${name}=    Get Element Attribute    lastname@value
     Log To Console    ${name}
+>>>>>>> 5a0e3164277497d822c63237c48bd19500cc7a28
