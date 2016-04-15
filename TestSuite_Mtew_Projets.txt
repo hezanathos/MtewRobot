@@ -74,45 +74,6 @@ Mtew_Projets_Filtres
     [Teardown]    Run keywords    close all browsers
     ...    AND    write_log    ${testName}    ${result}
 
-Mtew_Projets_RightEdit
-    [Tags]    projects    progress
-    connection_web
-    connection_log
-    access_project_panel
-    assert_url    projects
-    acces_modif
-    ${result}=    Set Variable    PASS
-    [Teardown]    Run keywords    close all browsers
-    ...    AND    write_log    ${testName}    ${result}
-
-Mtew_Projets_WrongEdit
-    [Tags]    projects    progress
-    connection_web
-    connection_log
-    access_project_panel
-    assert_url    projects
-    acces_modif
-    nullify_name
-    sleep    5
-    submit_form_add
-    assert_error    ${keyNameEmpty}    ${fichierFR}
-    fill_form_add
-    submit_form_add
-    assert_error    ${keyServicesEmpty}    ${fichierFR}
-    lang_eng
-    access_project_panel
-    assert_url    projects?locale=en
-    acces_modif
-    nullify_name
-    submit_form_add
-    assert_error    ${keyNameEmpty}    ${fichierEN}
-    fill_form_add
-    submit_form_add
-    assert_error    ${keyServicesEmpty}    ${fichierEN}
-    ${result}=    Set Variable    PASS
-    [Teardown]    Run keywords    close all browsers
-    ...    AND    write_log    ${testName}    ${result}
-
 Mtew_Projets_WrongDelete
     [Tags]    projects
     connection_web
