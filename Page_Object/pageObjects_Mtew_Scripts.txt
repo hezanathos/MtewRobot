@@ -1,7 +1,7 @@
 *** Settings ***
-Resource          ../Conf/conf_Mtew_Error.txt
+Resource          ../Conf/conf_Mtew_Scripts.txt
 Library           Selenium2Library
-Library           ../Scripts/errorMessageRetriever.py
+Library           ../Scripts/pythonMtewScripts.py
 Library           String
 Resource          ../Conf/conf_Mtew_URLs.txt
 
@@ -12,3 +12,8 @@ Resource          ../Conf/conf_Mtew_URLs.txt
     ${returnValue}=    Retrieve Message By Key    ${fileAddress}    ${key}
     ${returnValue}=    Decode Bytes To String    ${returnValue}    iso-8859-1
     page should contain    ${returnValue}
+
+!write_log
+    [Arguments]    ${nom}    ${result}
+    ${tempUrl}=    catenate    SEPARATOR=    ${TestAbsoluteLocation}    /log.txt
+    log writting    ${tempUrl}    ${nom}    ${result}

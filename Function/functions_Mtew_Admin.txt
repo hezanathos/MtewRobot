@@ -42,3 +42,6 @@ Modif_admin
     sleep    10
     !access_Modif_user
     sleep    10
+
+acces_destinataire
+    !access_destinataire

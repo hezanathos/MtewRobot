@@ -56,6 +56,20 @@ Library           Selenium2Library
     click element    name=delete.button
     click element    xpath=//span [text()="Ok"]
 
+!add_admin_projet
+    wait until page contains element    xpath=//span[text()="Ajouter un administrateur de projet"]
+    click element    xpath=//span[text()="Ajouter un administrateur de projet"]
+    sleep    2
+    input text    lastName    ${NomAdmin}
+    input text    firstname    ${PrenomAdmin}
+    input text    userLogin    ${IdentifiantAdmin}
+    input text    password    ${MotdePasseAdmin}
+    input text    passwordConfirmed    ${ConfirmMotdePasseAdmin}
+    input text    phone    ${TelephoneAdmin}
+    input text    mobile    ${MobileAdmin}
+    input text    email    ${MailAdmin}
+    click element    name=save.button
+
 !access_visual_user
     wait until page contains element    xpath=//table[@class="table table-bordered table-hover push-top-2"]//tr[contains(text(),${TestAdmin})]//td[contains(text(),${TestAdmin})]//span[text()="Voir"]
     sleep    2
@@ -69,4 +83,16 @@ Library           Selenium2Library
     sleep    10
 
 !input_pays
+<<<<<<< HEAD
     select from list    country    ${Pays}
+=======
+    select from list    id=country    ${Pays}
+
+!access_destinataire
+    wait until page contains element    id=administrationMenuItem
+    click element    xpath=//li[@id="administrationMenuItem"]//a[@class="dropdown-toggle"]
+    wait until page contains element    id=projectsSubMenuItem
+    click element    id=recipientsSubMenuItem
+    ${name}=    Get Element Attribute    lastname@value
+    Log To Console    ${name}
+>>>>>>> 5a0e3164277497d822c63237c48bd19500cc7a28

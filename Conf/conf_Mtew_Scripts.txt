@@ -7,3 +7,4 @@ ${keyNoProjectSelected}    projects.noProjectSelectedError
 ${fileAddress}    ${EMPTY}
 ${returnValue}    ${EMPTY}
 ${keyNameDuplicated}    projects.projectNameDuplicated
+${result}         FAIL
