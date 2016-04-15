@@ -84,3 +84,11 @@ Library           Selenium2Library
 
 !input_pays
     select from list    id=country    ${Pays}
+
+!access_destinataire
+    wait until page contains element    id=administrationMenuItem
+    click element    xpath=//li[@id="administrationMenuItem"]//a[@class="dropdown-toggle"]
+    wait until page contains element    id=projectsSubMenuItem
+    click element    id=recipientsSubMenuItem
+    ${name}=    Get Element Attribute    lastname@value
+    Log To Console    ${name}
