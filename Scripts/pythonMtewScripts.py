@@ -1,6 +1,7 @@
 # -*-coding:iso-8859-15-*
 import re
-
+import time
+import datetime
 
 def retrieve_message_by_key(adress, key):
    	print(adress)
@@ -18,3 +19,13 @@ def retrieve_message_by_key(adress, key):
         	raise AssertionError("No such key in properties file")
         except IOError:
         	print("No such file at given address")
+
+
+def log_writting(address, testName, testOutput):
+    	try:
+        	fichierLog = open(address, "wa")
+
+       		fichierLog.write("["+datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')+"]  -- "+testName+" -- "+testOutput+"\n")
+
+    	except IOError:
+        	print("Error while writting the given file")

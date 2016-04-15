@@ -1,0 +1,11 @@
+*** Settings ***
+Resource          ../Page_Object/pageObjects_Mtew_Scripts.txt
+
+*** Keywords ***
+assert_error
+    [Arguments]    ${key}    ${fichier}
+    !assert_error    ${key}    ${fichier}
+
+write_log
+    [Arguments]    ${nom}    ${result}
+    !write_log    ${nom}    ${result}

@@ -2,7 +2,7 @@
 Suite Teardown    close all browsers
 Resource          Function/functions_Mtew_Connexion.txt
 Resource          Function/functions_Mtew_Projets.txt
-Resource          Function/functions_Mtew_Error.txt.txt
+Resource          Function/functions_Mtew_Scripts.txt
 
 *** Test Cases ***
 Mtew_Projets_RightInsert
@@ -14,7 +14,8 @@ Mtew_Projets_RightInsert
     assert_url    projects/add
     fill_form_add
     submit_form_add
-    [Teardown]    close all browsers
+    [Teardown]    Run keywords    close all browsers
+    ...    AND    write_log    ${testName}    ${output}
 
 Mtew_Projets_WrongInsert
     [Tags]    projects
@@ -33,7 +34,8 @@ Mtew_Projets_WrongInsert
     submit_form_add
     assert_url    projects/add
     assert_error    ${keyNameEmpty}    ${fichierEN}
-    [Teardown]    close all browsers
+    [Teardown]    Run keywords    close all browsers
+    ...    AND    write_log    ${testName}    ${output}
 
 Mtew_Projets_Services
     [Tags]    projects
@@ -47,7 +49,8 @@ Mtew_Projets_Services
     assert_presence    0
     acces_question
     assert_presence    0
-    [Teardown]    close all browsers
+    [Teardown]    Run keywords    close all browsers
+    ...    AND    write_log    ${testName}    ${output}
 
 Mtew_Projets_Filtres
     [Tags]    projects
@@ -62,7 +65,8 @@ Mtew_Projets_Filtres
     assert_presence    1
     input_filtre_desc    0
     assert_presence    0
-    [Teardown]    close all browsers
+    [Teardown]    Run keywords    close all browsers
+    ...    AND    write_log    ${testName}    ${output}
 
 Mtew_Projets_RightEdit
     [Tags]    projects    progress
@@ -71,7 +75,8 @@ Mtew_Projets_RightEdit
     access_project_panel
     assert_url    projects
     acces_modif
-    [Teardown]    close all browsers
+    [Teardown]    Run keywords    close all browsers
+    ...    AND    write_log
 
 Mtew_Projets_WrongEdit
     [Tags]    projects    progress
@@ -97,7 +102,8 @@ Mtew_Projets_WrongEdit
     fill_form_add
     submit_form_add
     assert_error    ${keyServicesEmpty}    ${fichierEN}
-    [Teardown]    close all browsers
+    [Teardown]    Run keywords    close all browsers
+    ...    AND    write_log
 
 Mtew_Projets_WrongDelete
     [Tags]    projects
@@ -114,7 +120,8 @@ Mtew_Projets_WrongDelete
     click_suppr
     assert_url    projects?locale=en
     assert_error    ${keyNoProjectSelected}    ${fichierEN}
-    [Teardown]    close all browsers
+    [Teardown]    Run keywords    close all browsers
+    ...    AND    write_log
 
 Mtew_Projets_RightDelete
     [Tags]    projects
@@ -124,4 +131,5 @@ Mtew_Projets_RightDelete
     assert_url    projects
     check_box
     click_suppr
-    [Teardown]    close all browsers
+    [Teardown]    Run keywords    close all browsers
+    ...    AND    write_log
