@@ -23,9 +23,9 @@ def retrieve_message_by_key(adress, key):
 
 def log_writting(address, testName, testOutput):
     	try:
-        	fichierLog = open(address, "wa")
+        	fichierLog = open(address, "a")
 
-       		fichierLog.write("["+datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')+"]  -- "+testName+" -- "+testOutput+"\n")
+       		fichierLog.write("["+datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')+"]  -- "+testName+" -- "+testOutput+"\n ")
 
     	except IOError:
         	print("Error while writting the given file")
