@@ -1,6 +1,8 @@
 *** Variables ***
 ${nom_quizz}      test_quizz
-${sujet_quizz}    Test creation Quizz
+${sujet_quizz}    Les questions de la vie
 ${right_radio_button}    answerRadio11
 ${right_radio_button2}    answerRadio21
-${suiv_q}         lol
+@{questions_qcm}    Rouge ou bleu ?    Voile ou moteur ?    Grand ou petit ?    Singe ou chat ?
+@{reponses1}      Rouge    Voile    Petit    Chat
+@{reponses2}      Bleu    Moteur    Grand    Singe
