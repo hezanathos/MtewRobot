@@ -2,7 +2,7 @@
 Suite Teardown    close all browsers
 Resource          Function/functions_Mtew_Connexion.txt
 Resource          Function/functions_Mtew_Projets.txt
-Resource          Function/functions_Mtew_Error.txt.txt
+Resource          Function/functions_Mtew_Scripts.txt
 
 *** Test Cases ***
 Mtew_Projets_RightInsert
@@ -14,8 +14,9 @@ Mtew_Projets_RightInsert
     assert_url    projects/add
     fill_form_add
     submit_form_add
-    assert_insert
-    [Teardown]    close all browsers
+    ${result}=    Set Variable    PASS
+    [Teardown]    Run keywords    close all browsers
+    ...    AND    write_log    ${testName}    ${result}
 
 Mtew_Projets_WrongInsert
     [Tags]    projects
@@ -23,16 +24,26 @@ Mtew_Projets_WrongInsert
     connection_log
     access_project_panel
     access_add_project
-    assert_url    projects/add
+    lang_fr
+    assert_url    projects/add?locale=fr
+    submit_form_add
+    assert_url    projects/add?locale=fr
+    assert_error    ${keyNameEmpty}    ${fichierFR}
+    lang_eng
+    access_project_panel
+    access_add_project
     submit_form_add
     assert_url    projects/add
-    assert_error    ${keyNameEmpty}    ${fichierFR}
-    [Teardown]    close all browsers
+    assert_error    ${keyNameEmpty}    ${fichierEN}
+    ${result}=    Set Variable    PASS
+    [Teardown]    Run keywords    close all browsers
+    ...    AND    write_log    ${testName}    ${result}
 
 Mtew_Projets_Services
     [Tags]    projects
     connection_web
     connection_log
+    lang_fr
     acces_QCM
     assert_presence    1
     acces_message
@@ -41,12 +52,15 @@ Mtew_Projets_Services
     assert_presence    0
     acces_question
     assert_presence    0
-    [Teardown]    close all browsers
+    ${result}=    Set Variable    PASS
+    [Teardown]    Run keywords    close all browsers
+    ...    AND    write_log    ${testName}    ${result}
 
 Mtew_Projets_Filtres
     [Tags]    projects
     connection_web
     connection_log
+    lang_fr
     access_project_panel
     input_filtre_nom    1
     assert_presence    1
@@ -56,22 +70,29 @@ Mtew_Projets_Filtres
     assert_presence    1
     input_filtre_desc    0
     assert_presence    0
-    [Teardown]    close all browsers
-
-Mtew_Projets_RightEdit
-
-Mtew_Projets_WrongEdit
+    ${result}=    Set Variable    PASS
+    [Teardown]    Run keywords    close all browsers
+    ...    AND    write_log    ${testName}    ${result}
 
 Mtew_Projets_WrongDelete
     [Tags]    projects
     connection_web
     connection_log
+    lang_fr
     access_project_panel
     assert_url    projects
     click_suppr
     assert_url    projects
     assert_error    ${keyNoProjectSelected}    ${fichierFR}
-    [Teardown]    close all browsers
+    access_project_panel
+    lang_eng
+    assert_url    projects?locale=en
+    click_suppr
+    assert_url    projects?locale=en
+    assert_error    ${keyNoProjectSelected}    ${fichierEN}
+    ${result}=    Set Variable    PASS
+    [Teardown]    Run keywords    close all browsers
+    ...    AND    write_log    ${testName}    ${result}
 
 Mtew_Projets_RightDelete
     [Tags]    projects
@@ -81,4 +102,6 @@ Mtew_Projets_RightDelete
     assert_url    projects
     check_box
     click_suppr
-    [Teardown]    close all browsers
+    ${result}=    Set Variable    PASS
+    [Teardown]    Run keywords    close all browsers
+    ...    AND    write_log    ${testName}    ${result}

@@ -1,0 +1,19 @@
+*** Settings ***
+Resource          ../Conf/conf_Mtew_Scripts.txt
+Library           Selenium2Library
+Library           ../Scripts/pythonMtewScripts.py
+Library           String
+Resource          ../Conf/conf_Mtew_URLs.txt
+
+*** Keywords ***
+!assert_error
+    [Arguments]    ${key}    ${fichier}
+    ${fileAddress}=    catenate    SEPARATOR=    ${TestAbsoluteLocation}    ${propertiesDirectory}    ${fichier}
+    ${returnValue}=    Retrieve Message By Key    ${fileAddress}    ${key}
+    ${returnValue}=    Decode Bytes To String    ${returnValue}    iso-8859-1
+    page should contain    ${returnValue}
+
+!write_log
+    [Arguments]    ${nom}    ${result}
+    ${tempUrl}=    catenate    SEPARATOR=    ${TestAbsoluteLocation}    /log.txt
+    log writting    ${tempUrl}    ${nom}    ${result}

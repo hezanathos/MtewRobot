@@ -4,7 +4,44 @@ Resource          ../Page_Object/pageObjects_Mtew_Admin.txt
 *** Keywords ***
 access_admin
     !access_admin
+    !access_gestion_user
+    !add_user
+    !input_lastname
+    !input_firstname
+    !input_ident
+    !input_MdP
+    !input_confirmMdP
+    !input_pays
+    !input_telephone
+    !input_mobile
+    !input_mail
+    !record_admin
+
+Suppr_admin
+    !access_admin
+    !access_gestion_user
+    !sup_user
 
 acces_admin_tech
-    !acces_admin_tech
+    !access_admin_tech
 
+Suppr_admin_Annule
+    !access_admin
+    !access_gestion_user
+    !sup_user_Annule
+
+Visual_admin
+    !access_admin
+    !access_gestion_user
+    !access_visual_user
+    sleep    10
+
+Modif_admin
+    !access_admin
+    !access_gestion_user
+    sleep    10
+    !access_Modif_user
+    sleep    10
+
+acces_destinataire
+    !access_destinataire

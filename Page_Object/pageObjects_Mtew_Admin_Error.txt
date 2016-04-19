@@ -1,14 +1,14 @@
 *** Settings ***
-Resource          ../Conf/conf_Mtew_Error.txt
+Resource          ../Conf/conf_Mtew_Admin_Error.txt
 Library           Selenium2Library
-Library           ../Scripts/errorMessageRetriever.py
-Library           String
+Library           string
 Resource          ../Conf/conf_Mtew_URLs.txt
+Resource          ../Scripts/errorLangageRetriever.py
 
 *** Keywords ***
-!assert_error
+!assert_error_Admin
     [Arguments]    ${key}    ${fichier}
-    ${fileAddress}=    catenate    SEPARATOR=    ${propertiesDirectory}    ${fichier}
+    ${fileAddress}=    catenate    SEPARATOR=    ${TestAbsoluteLocation}    ${propertiesDirectory}    ${fichier}
     ${returnValue}=    Retrieve Message By Key    ${fileAddress}    ${key}
     ${returnValue}=    Decode Bytes To String    ${returnValue}    iso-8859-1
     page should contain    ${returnValue}

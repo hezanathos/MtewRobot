@@ -1,6 +1,7 @@
 *** Settings ***
 Resource          ../Conf/conf_Mtew_Projets.txt
 Library           Selenium2Library
+Resource          ../Conf/conf_Mtew_URLs.txt
 
 *** Keywords ***
 !access_project_panel
@@ -10,15 +11,16 @@ Library           Selenium2Library
     click element    id=projectsSubMenuItem
 
 !access_add_project
-    wait until page contains element    xpath=//span[text()="Ajouter un projet"]
-    click element    xpath=//span[text()="Ajouter un projet"]
+    wait until page contains element    xpath=//span[@class="glyphicon glyphicon-plus-sign glyphicon-primary"]
+    click element    xpath=//span[@class="glyphicon glyphicon-plus-sign glyphicon-primary"]
 
 !submit_form_add
-    click element    xpath=//input[@value="Sauvegarder"]
+    click element    xpath=//input[@name="save.button"]
 
 !input_name
-    input text    id=name    ${testNom}
-    input text    id=projectDescription    ${testDesc}
+    [Arguments]    ${nom}    ${desc}
+    input text    id=name    ${nom}
+    input text    id=projectDescription    ${desc}
 
 !input_services
     click element    xpath=//label[@for="servicesIds1"]
@@ -60,6 +62,7 @@ Library           Selenium2Library
 
 !input_filtre_nom
     [Arguments]    ${bool}
+    wait until page contains element    id=description
     input text    id=description    ${empty}
     run keyword if    ${bool}==1    input text    id=name    ${testNom}
     ...    ELSE    input text    id=name    azer
@@ -67,6 +70,7 @@ Library           Selenium2Library
 
 !input_filtre_desc
     [Arguments]    ${bool}
+    Wait Until Page Contains Element    id=name
     input text    id=name    ${empty}
     run keyword if    ${bool}==1    input text    id=description    ${testDesc}
     ...    ELSE    input text    id=description    azer
@@ -74,4 +78,20 @@ Library           Selenium2Library
 
 !upload_record_name
     click element    xpath=//span[@class="sound-icon"]
-    choose file    xpath=//input[@type="file"]    ${recordLocation}
+    ${tempUrl}=    Catenate    SEPARATOR=    ${TestAbsoluteLocation}    ${recordLocation}
+    choose file    xpath=//input[@type="file"]    ${tempUrl}
+
+!lang_eng
+    wait until page contains element    id=languageSelect
+    Select From List By value    id=languageSelect    en
+
+!lang_fr
+    wait until page contains element    id=languageSelect
+    Select From List By value    id=languageSelect    fr
+
+!acces_modif
+    wait until page contains element    xpath=//table[@id="projectTable"]//tr[contains(text(),${testNom})]//td[@class="actionsCell"]//a[2]
+    click element    xpath=//table[@id="projectTable"]//tr[contains(text(),${testNom})]//td[@class="actionsCell"]//a[2]
+
+!nullify_name
+    input text    id=name    ${empty}

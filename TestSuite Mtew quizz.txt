@@ -5,50 +5,98 @@ Resource          Function/functions_Mtew_Quizz.txt
 
 *** Test Cases ***
 Mtew_Quizz_Create&Delete
+    [Tags]    quizz
     connection_web
     connection_log
     aller_quizz
     acces_crea_quizz
-    form_nom_quizz
+    form_nom_quizz    TestDev
     form_questions_quizz
     validation_quizz
     suppr_recent_quizz
+    [Teardown]    close all browsers
 
 Mtew_Quizz_Create_voir_Delete
+    [Tags]    quizz
     connection_web
     connection_log
     aller_quizz
     acces_crea_quizz
-    form_nom_quizz
+    form_nom_quizz    TestDev
     form_questions_quizz
     validation_quizz
     aller_voir_quizz
     retour_voir_quizz
     suppr_recent_quizz
+    [Teardown]    close all browsers
 
-Mtew_Quizz_Create_change_Delete
+Mtew_Quizz_Create_publier_Delete
+    [Tags]    quizz
     connection_web
     connection_log
     aller_quizz
     acces_crea_quizz
-    form_nom_quizz
+    form_nom_quizz    TestDev
     form_questions_quizz
     validation_quizz
-    aller_modifier_quizz
-    add_question_quizz
-    form_questions_quizz
-    validation_quizz
+    aller_publier_quizz
+    retour_publier_quizz
     suppr_recent_quizz
+    [Teardown]    close all browsers
+
+Mtew_Quizz_Create_FEM_Delete
+    [Tags]    quizz
+    connection_web
+    connection_log
+    aller_quizz
+    acces_crea_quizz
+    form_nom_quizz    FEM
+    form_questions_quizz
+    validation_quizz
+    change_projet    FEM
+    suppr_recent_quizz
+    [Teardown]    close all browsers
 
 Mtew_Quizz_Create_addQuestion_Delete
+    [Tags]    quizz
     connection_web
     connection_log
     aller_quizz
     acces_crea_quizz
-    form_nom_quizz
+    form_nom_quizz    TestDev
     form_questions_quizz
     validation_quizz
     aller_modifier_quizz
     add_question_quizz
-    retour_modifier_quizz
+    form_questions2_quizz
+    validation_quizz
     suppr_recent_quizz
+    [Teardown]    close all browsers
+
+Mtew_Quizz_Create_addQuestions_Delete
+    [Tags]    quizz
+    connection_web
+    connection_log
+    aller_quizz
+    acces_crea_quizz
+    form_nom_quizz    TestDev
+    form_questions_quizz
+    validation_quizz
+    aller_modifier_quizz
+    add_question_quizz
+    form_questions2_quizz
+    validation_quizz
+    aller_modifier_quizz
+    add_question_quizz
+    form_questions2_quizz
+    validation_quizz
+    suppr_recent_quizz
+    [Teardown]    close all browsers
+
+Mtew_Quizz_Exporter_null
+    [Tags]    quizz
+    connection_web
+    connection_log
+    aller_quizz
+    aller_exporter_ok
+    [Teardown]    close all browsers
