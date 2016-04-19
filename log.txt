@@ -73,4 +73,12 @@
  [2016-04-19 14:07:38]  -- Mtew_Projets_Filtres -- PASS
  [2016-04-19 14:07:57]  -- Mtew_Projets_WrongDelete -- PASS
  [2016-04-19 14:08:12]  -- Mtew_Projets_RightDelete -- PASS
+ [2016-04-19 14:20:15]  -- Mtew_Login_RightIDs -- PASS
+ [2016-04-19 14:20:21]  -- Mtew_Login_WrongIDs -- PASS
+ [2016-04-19 14:20:36]  -- Mtew_Projets_RightInsert -- PASS
+ [2016-04-19 14:20:59]  -- Mtew_Projets_WrongInsert -- PASS
+ [2016-04-19 14:21:14]  -- Mtew_Projets_Services -- PASS
+ [2016-04-19 14:21:37]  -- Mtew_Projets_Filtres -- PASS
+ [2016-04-19 14:21:56]  -- Mtew_Projets_WrongDelete -- PASS
+ [2016-04-19 14:22:13]  -- Mtew_Projets_RightDelete -- PASS
  
