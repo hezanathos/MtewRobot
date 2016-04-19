@@ -1,9 +1,9 @@
 *** Settings ***
-Resource          ../Conf/conf_Mtew_Admin_Error.txt
+Resource          ../Conf/conf_Mtew_Scripts.txt
 Library           Selenium2Library
-Library           string
+Library           String
 Resource          ../Conf/conf_Mtew_URLs.txt
-Resource          ../Scripts/errorLangageRetriever.py
+Library           ../Scripts/errorLangageRetriever.py
 
 *** Keywords ***
 !assert_error_Admin

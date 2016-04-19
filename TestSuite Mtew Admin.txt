@@ -4,40 +4,49 @@ Resource          Function/functions_Mtew_Admin.txt
 
 *** Test Cases ***
 Creation_Admin
+    [Tags]    admin
     connection_web
     connection_log
     access_admin
     [Teardown]    close all browsers
 
 Tech_admin_Profile_Test
+    [Tags]    admin
+    connection_web
+    connection_log
     acces_admintech
     [Teardown]    close all browsers
 
 Destruction_Admin
+    [Tags]    admin
     connection_web
     connection_log
     suppr_admin
     [Teardown]    close all browsers
 
 Destruction_Admin_Annule
+    [Tags]    admin
     connection_web
     connection_log
     suppr_admin_Annule
     [Teardown]    close all browsers
 
 Visual_Admin
+    [Tags]    admin
     connection_web
     connection_log
     Visual_admin
     [Teardown]    close all browsers
 
 Modif_Admin
+    [Tags]    admin
     connection_web
     connection_log
     Modif_admin
     [Teardown]    close all browsers
 
 Tech_destinataire_Profile_Test
+    [Tags]    admin
     connection_web
     Sleep    5
     connection_log

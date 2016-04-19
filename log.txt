@@ -29,4 +29,40 @@
  [2016-04-19 11:31:42]  -- Mtew_Projets_Filtres -- PASS
  [2016-04-19 11:32:00]  -- Mtew_Projets_WrongDelete -- PASS
  [2016-04-19 11:32:13]  -- Mtew_Projets_RightDelete -- PASS
+ [2016-04-19 11:35:04]  -- Mtew_Login_RightIDs -- PASS
+ [2016-04-19 11:35:10]  -- Mtew_Login_WrongIDs -- PASS
+ [2016-04-19 11:35:25]  -- Mtew_Projets_RightInsert -- PASS
+ [2016-04-19 11:35:47]  -- Mtew_Projets_WrongInsert -- PASS
+ [2016-04-19 11:36:01]  -- Mtew_Projets_Services -- PASS
+ [2016-04-19 11:36:20]  -- Mtew_Projets_Filtres -- PASS
+ [2016-04-19 11:36:38]  -- Mtew_Projets_WrongDelete -- PASS
+ [2016-04-19 11:36:52]  -- Mtew_Projets_RightDelete -- PASS
+ [2016-04-19 11:44:21]  -- Mtew_Login_RightIDs -- PASS
+ [2016-04-19 11:44:28]  -- Mtew_Login_WrongIDs -- PASS
+ [2016-04-19 11:44:47]  -- Mtew_Projets_RightInsert -- PASS
+ [2016-04-19 11:45:11]  -- Mtew_Projets_WrongInsert -- PASS
+ [2016-04-19 11:45:22]  -- Mtew_Projets_Services -- FAIL
+ [2016-04-19 11:45:46]  -- Mtew_Projets_Filtres -- PASS
+ [2016-04-19 11:46:05]  -- Mtew_Projets_WrongDelete -- PASS
+ [2016-04-19 11:46:21]  -- Mtew_Projets_RightDelete -- PASS
+ [2016-04-19 13:00:22]  -- Mtew_Login_RightIDs -- PASS
+ [2016-04-19 13:00:42]  -- Mtew_Login_WrongIDs -- PASS
+ [2016-04-19 13:01:29]  -- Mtew_Projets_RightInsert -- PASS
+ [2016-04-19 13:02:32]  -- Mtew_Projets_Services -- PASS
+ [2016-04-19 13:03:28]  -- Mtew_Projets_Filtres -- PASS
+ [2016-04-19 13:04:12]  -- Mtew_Projets_RightDelete -- PASS
+ [2016-04-19 13:14:05]  -- Mtew_Login_RightIDs -- PASS
+ [2016-04-19 13:14:25]  -- Mtew_Login_WrongIDs -- PASS
+ [2016-04-19 13:15:06]  -- Mtew_Projets_RightInsert -- PASS
+ [2016-04-19 13:16:18]  -- Mtew_Projets_Services -- PASS
+ [2016-04-19 13:17:42]  -- Mtew_Projets_WrongDelete -- PASS
+ [2016-04-19 13:18:18]  -- Mtew_Projets_RightDelete -- PASS
+ [2016-04-19 13:48:51]  -- Mtew_Login_RightIDs -- PASS
+ [2016-04-19 13:48:59]  -- Mtew_Login_WrongIDs -- PASS
+ [2016-04-19 13:49:14]  -- Mtew_Projets_RightInsert -- PASS
+ [2016-04-19 13:49:33]  -- Mtew_Projets_WrongInsert -- PASS
+ [2016-04-19 13:49:47]  -- Mtew_Projets_Services -- PASS
+ [2016-04-19 13:50:01]  -- Mtew_Projets_Filtres -- PASS
+ [2016-04-19 13:50:16]  -- Mtew_Projets_WrongDelete -- PASS
+ [2016-04-19 13:50:28]  -- Mtew_Projets_RightDelete -- PASS
  
