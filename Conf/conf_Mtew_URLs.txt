@@ -3,4 +3,4 @@ ${recordLocation}    /Ressources/recordProjectName.wav    # Localisation du fich
 ${propertiesDirectory}    /Ressources/Properties/    # Localisation du dossier de propriétés
 ${MtewAddress}    http://10.0.2.2:8080/M-tew/    # Url d'accès à Mtew
 ${tempUrl}        \    # Variable tampon utilisée pour la concaténation de l'adresse de base et d'un chemin spécifique
-${TestAbsoluteLocation}    /home/olps/Workspace/MtewRobot
+${TestAbsoluteLocation}    /home/vagrant/Bureau/MtewRobot

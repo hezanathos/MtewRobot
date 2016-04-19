@@ -10,6 +10,8 @@ Creation_Admin
     [Teardown]    close all browsers
 
 Tech_admin_Profile_Test
+    connection_web
+    connection_log
     acces_admintech
     [Teardown]    close all browsers
 
