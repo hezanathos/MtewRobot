@@ -15,6 +15,7 @@ Resource          ../Conf/conf_Mtew_URLs.txt
     click element    xpath=//span[@class="glyphicon glyphicon-plus-sign glyphicon-primary"]
 
 !submit_form_add
+    wait until page contains element    xpath=//input[@name="save.button"]
     click element    xpath=//input[@name="save.button"]
 
 !input_name
