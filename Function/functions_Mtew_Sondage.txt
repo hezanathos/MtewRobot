@@ -1,0 +1,13 @@
+*** Settings ***
+Resource          ../Page_Object/pageObjects_Mtew_Sondage.txt
+
+*** Keywords ***
+add_Sondage
+    !click_add_sondage
+    !save_add_sondage
+
+sup_sondage
+    !click_sup_sondage
+
+see_sondage
+    !see_sondage

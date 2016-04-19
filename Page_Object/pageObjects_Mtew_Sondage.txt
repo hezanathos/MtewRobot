@@ -1,0 +1,29 @@
+*** Settings ***
+Library           Selenium2Library
+Resource          ../Conf/conf_Mtew_Sondage.txt
+
+*** Keywords ***
+!click_add_sondage
+    Wait Until Page Contains Element    xpath=//a[@href="/M-tew/survey/add?project_id=1"]
+    Click Element    xpath=//a[@href="/M-tew/survey/add?project_id=1"]
+    Select From List    id=projects    TestDev
+    Input Text    id=surveyname    ${nomSondageNath}
+    Input Text    id=surveyname    ${nomSondageNath}
+    Input Text    id=description    ${SujetSondage}
+    Input Text    id=question    Que dois-je saisir ?
+    Input Text    id=answer1    Choix N°1
+    Input Text    id=answer2    Choix N°2
+    Input Text    id=answer3    Choix N°3
+    Location Should Be    url=http://10.0.2.2:8080/M-tew/survey/add?project_id=1
+    Click Button    name=save.button
+
+!save_add_sondage
+    Click Element    xpath=//table[@class="table table-bordered table-hover"]//tbody//tr//td//div//label
+
+!click_sup_sondage
+    Wait Until Page Contains    xpath=//a[@class="titretableau"]
+    Click Element    xpath=//input[@title="Supprimer"]
+
+!see_sondage
+    Click Element    xpath=//table[@class="table table-bordered table-hover"]//tr[contains(text(),${nomSondageNath})]//td[@class="bordentete nowrap"]//a
+    sleep    10

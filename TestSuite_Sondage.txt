@@ -1,0 +1,11 @@
+*** Settings ***
+Resource          Function/functions_Mtew_Connexion.txt
+Resource          Function/functions_Mtew_Projets.txt
+Resource          Function/functions_Mtew_Sondage.txt
+
+*** Test Cases ***
+TestCase_Sondage
+    connection_web
+    connection_log
+    acces_sondage
+    add_sondage
