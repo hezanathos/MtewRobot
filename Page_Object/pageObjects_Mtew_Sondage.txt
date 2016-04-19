@@ -18,7 +18,7 @@ Resource          ../Conf/conf_Mtew_Sondage.txt
     Click Button    name=save.button
 
 !save_add_sondage
-    Click Element    xpath=//table[@class="table table-bordered table-hover"]//tbody//tr//td//div//label
+    Click Element    xpath=//table[@class="table table-bordered table-hover"]//tr[contains(text(),${nomSondageNath})]//td[@class="checkboxCell"]//div//label
 
 !click_sup_sondage
     Wait Until Page Contains    xpath=//a[@class="titretableau"]

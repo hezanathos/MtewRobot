@@ -10,7 +10,7 @@ acces_crea_quizz
 
 form_nom_quizz
     [Arguments]    ${nomProjet}
-    !projet_quizz
+    !projet_quizz    ${nomProjet}
     !nom_quizz
     !sujet_quizz
 

@@ -9,8 +9,9 @@ Library           ../Scripts/test.py
     click element    xpath=//a[text()="QCM"]
 
 !projet_quizz
+    [Arguments]    ${nomProjet}
     Wait Until Page Contains Element    projects
-    select from list    projects    TestDev
+    select from list    projects    ${nomProjet}
 
 !nom_quizz
     Wait Until Page Contains Element    quizname
@@ -119,3 +120,8 @@ Library           ../Scripts/test.py
     click element    xpath=//div[@class="form-group"]//a[2]
     wait until page contains element    xpath=//button[@class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"]
     click element    xpath=//button[@class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"]
+
+!click_projet
+    [Arguments]    ${nomProjet}
+    Wait Until Page Contains Element    projectId
+    select from list    projectId    ${nomProjet}
