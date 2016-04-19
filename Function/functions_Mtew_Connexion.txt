@@ -1,5 +1,6 @@
 *** Settings ***
 Resource          ../Page_Object/pageObjects_Mtew_Connexion.txt
+Resource          ../Page_Object/pageObjects_Mtew_Projets.txt
 
 *** Keywords ***
 connection_web
@@ -9,6 +10,7 @@ connection_log
     !entrer_id
     !entrer_mdp
     !click_connecter
+    !lang_fr
 
 deconnection_log
     !click_profil
