@@ -46,6 +46,7 @@ Resource          ../Conf/conf_Mtew_URLs.txt
 
 !assert_presence
     [Arguments]    ${present}
+    wait until page contains element    id=footer
     run keyword if    ${present}==1    page should contain    ${testNom}
     ...    ELSE    page should not contain    ${testNom}
 
