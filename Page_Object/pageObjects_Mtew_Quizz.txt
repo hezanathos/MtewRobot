@@ -123,5 +123,5 @@ Library           ../Scripts/test.py
 
 !click_projet
     [Arguments]    ${nomProjet}
-    Wait Until Page Contains Element    projectId
-    select from list    projectId    ${nomProjet}
+    Wait Until Page Contains Element    id=projectId
+    select from list    id=projectId    ${nomProjet}
