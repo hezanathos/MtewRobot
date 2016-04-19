@@ -76,12 +76,10 @@ Library           ../Scripts/test.py
 !click_addQuestion_quizz
     wait until page contains element    xpath=//li[@id="addQuestionBtn"]//a
     click element    xpath=//ul[@id="tabs"]//li[last() - 1]//a
-    ${current_p}=    get text    xpath=//ul[@id="tabs"]//li[last() - 1]//a
-    ${current_index}=    get text    xpath=//ul[@id="tabs"]//li[last() - 1]//a
     ${current_q}=    get text    xpath=//ul[@id="tabs"]//li[last() - 1]//a
     ${new_id}=    k_bon_id    ${current_q}
-    ${new_index}=    k_index    ${current_index}
-    ${new_p}=    k_coche_bonne_reponse    ${current_p}
+    ${new_index}=    k_index    ${current_q}
+    ${new_p}=    k_coche_bonne_reponse    ${current_q}
     set Suite variable    ${suiv_q}    ${new_id}
     set Suite variable    ${suiv_p}    ${new_p}
     set suite variable    ${suiv_index}    ${new_index}
