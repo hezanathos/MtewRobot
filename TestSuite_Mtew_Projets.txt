@@ -24,10 +24,9 @@ Mtew_Projets_WrongInsert
     connection_log
     access_project_panel
     access_add_project
-    lang_fr
-    assert_url    projects/add?locale=fr
+    assert_url    projects/add
     submit_form_add
-    assert_url    projects/add?locale=fr
+    assert_url    projects/add
     assert_error    ${keyNameEmpty}    ${fichierFR}
     lang_eng
     access_project_panel
