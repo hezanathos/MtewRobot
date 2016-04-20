@@ -11,6 +11,7 @@ Resource          ../Conf/conf_Mtew_URLs.txt
     ${fileAddress}=    catenate    SEPARATOR=    ${TestAbsoluteLocation}    ${propertiesDirectory}    ${fichier}
     ${returnValue}=    Retrieve Message By Key    ${fileAddress}    ${key}
     ${returnValue}=    Decode Bytes To String    ${returnValue}    iso-8859-1
+    wait until page contains element    id=footer
     page should contain    ${returnValue}
 
 !write_log
