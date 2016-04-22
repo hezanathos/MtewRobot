@@ -51,7 +51,6 @@ Library           Selenium2Library
 
 !sup_user
     wait until page contains element    xpath=//table[@class="table table-bordered table-hover push-top-2"]//tr[contains(text(),${TestAdmin})]//td[contains(text(),${TestAdmin})]//label
-    sleep    2
     click element    xpath=//table[@class="table table-bordered table-hover push-top-2"]//tr[contains(text(),${TestAdmin})]//td[contains(text(),${TestAdmin})]//label
     click element    name=delete.button
     click element    xpath=//span [text()="Ok"]
@@ -92,3 +91,9 @@ Library           Selenium2Library
     click element    id=recipientsSubMenuItem
     ${name}=    Get Element Attribute    lastname@value
     Log To Console    ${name}
+
+!sup_user_Annule
+    wait until page contains element    xpath=//table[@class="table table-bordered table-hover push-top-2"]//tr[contains(text(),${TestAdmin})]//td[contains(text(),${TestAdmin})]//label
+    click element    xpath=//table[@class="table table-bordered table-hover push-top-2"]//tr[contains(text(),${TestAdmin})]//td[contains(text(),${TestAdmin})]//label
+    click element    name=delete.button
+    click element    xpath=//span [text()="Annuler"]

@@ -26,8 +26,6 @@ acces_admin_tech
     !access_admin_tech
 
 Suppr_admin_Annule
-    !access_admin
-    !access_gestion_user
     !sup_user_Annule
 
 Visual_admin

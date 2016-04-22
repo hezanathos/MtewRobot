@@ -28,6 +28,7 @@ Mtew_TechAdmin_Cancel_Destroy
     [Tags]    admin
     connection_web
     connection_log
+    access_admin
     suppr_admin_Annule
     [Teardown]    close all browsers
 
@@ -48,8 +49,6 @@ Mtew_TechAdmin_Edit
 Mtew_TechDestinataire_Profile
     [Tags]    admin
     connection_web
-    Sleep    5
     connection_log
-    Sleep    5
     acces_destinataire
     [Teardown]    close all browsers
