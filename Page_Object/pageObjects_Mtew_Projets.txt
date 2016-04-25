@@ -100,7 +100,7 @@ Resource          ../Conf/conf_Mtew_URLs.txt
 
 !assert_selected
     [Arguments]    ${projet}
-    Page Should Contain Element    xpath=//select[@id="projectId"]//option[@selected="selected"]
+    Page Should Contain Element    xpath=//select[@id="projectId"]/option[text()=${projet} and @selected='selected']
 
 !select_projet
     [Arguments]    ${projet}

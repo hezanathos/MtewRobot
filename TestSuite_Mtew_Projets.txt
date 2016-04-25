@@ -8,7 +8,7 @@ Resource          Function/functions_Mtew_Scripts.txt
 Mtew_Projets_RightInsert
     [Tags]    projects
     connection_web
-    connection_log    0
+    connection_log
     access_project_panel
     access_add_project
     assert_url    projects/add
@@ -21,7 +21,7 @@ Mtew_Projets_RightInsert
 Mtew_Projets_WrongNameInsert
     [Tags]    projects
     connection_web
-    connection_log    0
+    connection_log
     access_project_panel
     access_add_project
     assert_url    projects/add
@@ -38,11 +38,11 @@ Mtew_Projets_WrongNameInsert
     [Teardown]    Run keywords    close all browsers
     ...    AND    write_log    ${testName}    ${result}
 
-Mtew_Projects_WrongServicesInsert
+Mtew_Projets_WrongServicesInsert
     [Tags]    projects
     [Setup]
     connection_web
-    connection_log    0
+    connection_log
     lang_fr
     access_project_panel
     access_add_project
@@ -68,7 +68,7 @@ Mtew_Projects_WrongServicesInsert
 Mtew_Projets_Services
     [Tags]    projects
     connection_web
-    connection_log    0
+    connection_log
     lang_fr
     acces_QCM
     assert_presence    1
@@ -85,7 +85,7 @@ Mtew_Projets_Services
 Mtew_Projets_Filtres
     [Tags]    projects
     connection_web
-    connection_log    0
+    connection_log
     lang_fr
     access_project_panel
     input_filtre_nom    1
@@ -106,7 +106,7 @@ Mtew_Projets_Session
     connection_log
     acces_QCM
     select_projet    FEM
-    assert_selected    FEM
+    assert_selected    "FEM"
     ${result}=    Set Variable    PASS
     [Teardown]    Run keywords    close all browsers
     ...    AND    write_log    ${testName}    ${result}
@@ -134,7 +134,7 @@ Mtew_Projets_WrongDelete
 Mtew_Projets_RightDelete
     [Tags]    projects
     connection_web
-    connection_log    0
+    connection_log
     access_project_panel
     assert_url    projects
     check_box
