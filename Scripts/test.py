@@ -19,5 +19,13 @@ def k_index(element):
 	num = int(num)
 	return num
 
+def level(num):
+	if num =="0":
+		return "Techadmin"
+	elif num == "1":
+		return "MT"
+	else:
+		return "none"
+
 def print_exp(exp):
 	print(exp)

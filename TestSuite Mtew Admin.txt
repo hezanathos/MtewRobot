@@ -6,28 +6,28 @@ Resource          Function/functions_Mtew_Admin.txt
 Mtew_TechAdmin_Create
     [Tags]    admin
     connection_web
-    connection_log
+    connection_log    0
     access_admin
     [Teardown]    close all browsers
 
 Mtew_TechAdmin_Profile
     [Tags]    admin
     connection_web
-    connection_log
+    connection_log    0
     acces_admintech
     [Teardown]    close all browsers
 
 Mtew_TechAdmin_Destroy
     [Tags]    admin
     connection_web
-    connection_log
+    connection_log    0
     suppr_admin
     [Teardown]    close all browsers
 
 Mtew_TechAdmin_Cancel_Destroy
     [Tags]    admin
     connection_web
-    connection_log
+    connection_log    0
     access_admin
     suppr_admin_Annule
     [Teardown]    close all browsers
@@ -35,20 +35,20 @@ Mtew_TechAdmin_Cancel_Destroy
 Mtew_TechAdmin_View
     [Tags]    admin
     connection_web
-    connection_log
+    connection_log    0
     Visual_admin
     [Teardown]    close all browsers
 
 Mtew_TechAdmin_Edit
     [Tags]    admin
     connection_web
-    connection_log
+    connection_log    0
     Modif_admin
     [Teardown]    close all browsers
 
 Mtew_TechDestinataire_Profile
     [Tags]    admin
     connection_web
-    connection_log
+    connection_log    0
     acces_destinataire
     [Teardown]    close all browsers

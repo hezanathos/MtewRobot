@@ -7,7 +7,8 @@ connection_web
     !aller sur le net
 
 connection_log
-    !entrer_id
+    [Arguments]    ${level}
+    !entrer_id    ${level}
     !entrer_mdp
     !click_connecter
     !lang_fr

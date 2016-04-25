@@ -2,6 +2,7 @@
 Resource          ../Conf/conf_Mtew_Connexion.txt
 Library           Selenium2Library
 Resource          ../Conf/conf_Mtew_URLs.txt
+Library           ../Scripts/test.py
 
 *** Keywords ***
 !aller sur le net
@@ -9,7 +10,9 @@ Resource          ../Conf/conf_Mtew_URLs.txt
     open browser    url=${tempUrl}    browser=firefox    ff_profile_dir=${profile}
 
 !entrer_id
-    Input Text    sigin    ${id}
+    [Arguments]    ${level}
+    ${connection_log}=    level    ${level}
+    Input Text    sigin    ${connection_log}
 
 !entrer_mdp
     input text    inputPassword    ${mdp}
