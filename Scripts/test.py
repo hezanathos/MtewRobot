@@ -23,7 +23,7 @@ def level(num):
 	if num =="0":
 		return "Techadmin"
 	elif num == "1":
-		return "MT"
+		return "Projectadmin"
 	else:
 		return "none"
 

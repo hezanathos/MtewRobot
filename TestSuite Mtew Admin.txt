@@ -6,7 +6,7 @@ Resource          Function/functions_Mtew_Admin.txt
 Mtew_TechAdmin_Create
     [Tags]    admin
     connection_web
-    connection_log    0
+    connection_log    1
     access_admin
     [Teardown]    close all browsers
 
