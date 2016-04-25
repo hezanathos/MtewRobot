@@ -17,8 +17,13 @@ Mtew_Login_RightIDs
 Mtew_Login_WrongIDs
     [Tags]    login
     connection_web
-    bad_connection
+    bad_connection    1
     assert_url    signin?error=1
     ${result}=    Set Variable    PASS
     [Teardown]    Run keywords    close all browsers
     ...    AND    write_log    ${testName}    ${result}
+
+Mtew_Login_NoIDs
+    connection_web
+    bad_connection    0
+    assert_url    signin

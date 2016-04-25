@@ -21,5 +21,6 @@ assert_url
     !assert_url    ${url}
 
 bad_connection
-    !entrer_mauvais_ids
+    [Arguments]    ${ids}
+    Run keyword if    ${ids}==1    !entrer_mauvais_ids
     !click_connecter

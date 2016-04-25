@@ -18,7 +18,7 @@ Mtew_Projets_RightInsert
     [Teardown]    Run keywords    close all browsers
     ...    AND    write_log    ${testName}    ${result}
 
-Mtew_Projets_WrongInsert
+Mtew_Projets_WrongNameInsert
     [Tags]    projects
     connection_web
     connection_log
@@ -37,6 +37,32 @@ Mtew_Projets_WrongInsert
     ${result}=    Set Variable    PASS
     [Teardown]    Run keywords    close all browsers
     ...    AND    write_log    ${testName}    ${result}
+
+Mtew_Projects_WrongServicesInsert
+    [Tags]    projects
+    [Setup]    Run keywords    close all browsers
+    ...    AND    write_log    ${testName}    ${result}
+    connection_web
+    connection_log
+    lang_fr
+    access_project_panel
+    access_add_project
+    assert_url    projects/add
+    fill_form_add
+    fill_form_add
+    submit_form_add
+    assert_url    projects/add
+    assert_error    ${keyServicesEmpty}    ${fichierFR}
+    lang_eng
+    access_project_panel
+    access_add_project
+    assert_url    projects/add
+    fill_form_add
+    fill_form_add
+    submit_form_add
+    assert_url    projects/add
+    assert_error    ${keyServicesEmpty}    ${fichierEN}
+    ${result}=    Set Variable    PASS
 
 Mtew_Projets_Services
     [Tags]    projects

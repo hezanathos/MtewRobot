@@ -41,7 +41,7 @@ Library           Selenium2Library
     input text    email    ${MailAdmin}
 
 !record_admin
-    click element    name=save.button
+    click element    xpath=//input[@name="save.button"]
 
 !access_admin_tech
     wait until page contains element    id=administrationMenuItem
@@ -95,5 +95,5 @@ Library           Selenium2Library
 !sup_user_Annule
     wait until page contains element    xpath=//table[@class="table table-bordered table-hover push-top-2"]//tr[contains(text(),${TestAdmin})]//td[contains(text(),${TestAdmin})]//label
     click element    xpath=//table[@class="table table-bordered table-hover push-top-2"]//tr[contains(text(),${TestAdmin})]//td[contains(text(),${TestAdmin})]//label
-    click element    name=delete.button
+    click element    xpath=//input[@name="delete.button"]
     click element    xpath=//span [text()="Annuler"]
