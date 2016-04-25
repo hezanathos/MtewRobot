@@ -9,7 +9,7 @@ Library           String
 Mtew_Login_RightIDs
     [Tags]    login
     connection_web
-    connection_log
+    connection_log    0
     assert_url    welcome?locale=fr
     deconnection_log
     ${result}=    Set Variable    PASS
@@ -37,7 +37,7 @@ Mtew_Login_NoIDs
 Mtew_Login_NoLogAccess
     [Tags]    login
     connection_web
-    :FOR    ${element}    IN    @{pageList}
+    : FOR    ${element}    IN    @{pageList}
     \    navigation_web    ${element}
     \    assert_url    signin
     connection_log
