@@ -33,3 +33,8 @@ Resource          ../Conf/conf_Mtew_URLs.txt
 !entrer_mauvais_ids
     Input Text    sigin    azer
     input text    inputPassword    azer
+
+!changer_page
+    [Arguments]    ${page}
+    ${tempUrl}=    catenate    SEPARATOR=    ${MtewAddress}    ${page}
+    goto    ${tempUrl}

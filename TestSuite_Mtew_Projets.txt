@@ -40,8 +40,7 @@ Mtew_Projets_WrongNameInsert
 
 Mtew_Projects_WrongServicesInsert
     [Tags]    projects
-    [Setup]    Run keywords    close all browsers
-    ...    AND    write_log    ${testName}    ${result}
+    [Setup]
     connection_web
     connection_log
     lang_fr
@@ -63,6 +62,8 @@ Mtew_Projects_WrongServicesInsert
     assert_url    projects/add
     assert_error    ${keyServicesEmpty}    ${fichierEN}
     ${result}=    Set Variable    PASS
+    [Teardown]    Run keywords    close all browsers
+    ...    AND    write_log    ${testName}    ${result}
 
 Mtew_Projets_Services
     [Tags]    projects

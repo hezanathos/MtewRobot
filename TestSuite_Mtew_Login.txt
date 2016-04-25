@@ -2,6 +2,8 @@
 Suite Teardown    close all browsers
 Resource          Function/functions_Mtew_Connexion.txt
 Resource          Function/functions_Mtew_Scripts.txt
+Library           Collections
+Library           String
 
 *** Test Cases ***
 Mtew_Login_RightIDs
@@ -24,6 +26,24 @@ Mtew_Login_WrongIDs
     ...    AND    write_log    ${testName}    ${result}
 
 Mtew_Login_NoIDs
+    [Tags]    login
     connection_web
     bad_connection    0
     assert_url    signin
+    ${result}=    Set Variable    PASS
+    [Teardown]    Run keywords    close all browsers
+    ...    AND    write_log    ${testName}    ${result}
+
+Mtew_Login_NoLogAccess
+    [Tags]    login
+    connection_web
+    :FOR    ${element}    IN    @{pageList}
+    \    navigation_web    ${element}
+    \    assert_url    signin
+    connection_log
+    ${lastUrl}=    get from list    ${pageList}    -1
+    ${tempUrl]}=    catenate    SEPARATOR=    ${lastUrl}    ?locale=fr
+    assert_url    ${tempUrl}
+    ${result}=    Set Variable    PASS
+    [Teardown]    Run keywords    close all browsers
+    ...    AND    write_log    ${testName}    ${result}

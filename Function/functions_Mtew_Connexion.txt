@@ -24,3 +24,7 @@ bad_connection
     [Arguments]    ${ids}
     Run keyword if    ${ids}==1    !entrer_mauvais_ids
     !click_connecter
+
+navigation_web
+    [Arguments]    ${page}
+    !changer_page    ${page}
