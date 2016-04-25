@@ -97,3 +97,12 @@ Resource          ../Conf/conf_Mtew_URLs.txt
 
 !nullify_name
     input text    id=name    ${empty}
+
+!assert_selected
+    [Arguments]    ${projet}
+    Page Should Contain Element    xpath=//select[@id="projectId"]//option[@selected="selected" ]
+
+!select_projet
+    [Arguments]    ${projet}
+    wait until page contains element    id=projectId
+    Select From List By Label    id=projectId    ${projet}

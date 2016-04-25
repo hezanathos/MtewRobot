@@ -65,3 +65,11 @@ fill_form_edit
     !input_name    ${testNomEdit}    ${testDescEdit}
     !upload_record_name
     !input_services
+
+assert_selected
+    [Arguments]    ${projet}
+    !assert_selected    ${projet}
+
+select_projet
+    [Arguments]    ${projet}
+    !select_projet    ${projet}
