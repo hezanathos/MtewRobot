@@ -7,7 +7,7 @@ Resource          Function/functions_Mtew_Quizz.txt
 Mtew_Quizz_Create&Delete
     [Tags]    quizz
     connection_web
-    connection_log    0
+    connection_log
     aller_quizz
     acces_crea_quizz
     form_nom_quizz    TestDev
@@ -19,7 +19,7 @@ Mtew_Quizz_Create&Delete
 Mtew_Quizz_Create_voir_Delete
     [Tags]    quizz
     connection_web
-    connection_log    0
+    connection_log
     aller_quizz
     acces_crea_quizz
     form_nom_quizz    TestDev
@@ -33,7 +33,7 @@ Mtew_Quizz_Create_voir_Delete
 Mtew_Quizz_Create_publier_Delete
     [Tags]    quizz
     connection_web
-    connection_log    0
+    connection_log
     aller_quizz
     acces_crea_quizz
     form_nom_quizz    TestDev
@@ -47,7 +47,7 @@ Mtew_Quizz_Create_publier_Delete
 Mtew_Quizz_Create_FEM_Delete
     [Tags]    quizz
     connection_web
-    connection_log    0
+    connection_log
     aller_quizz
     acces_crea_quizz
     form_nom_quizz    FEM
@@ -60,7 +60,7 @@ Mtew_Quizz_Create_FEM_Delete
 Mtew_Quizz_Create_addQuestion_Delete
     [Tags]    quizz
     connection_web
-    connection_log    0
+    connection_log
     aller_quizz
     acces_crea_quizz
     form_nom_quizz    TestDev
@@ -76,7 +76,7 @@ Mtew_Quizz_Create_addQuestion_Delete
 Mtew_Quizz_Create_addQuestions_Delete
     [Tags]    quizz
     connection_web
-    connection_log    0
+    connection_log
     aller_quizz
     acces_crea_quizz
     form_nom_quizz    TestDev
@@ -96,7 +96,7 @@ Mtew_Quizz_Create_addQuestions_Delete
 Mtew_Quizz_Exporter_null
     [Tags]    quizz
     connection_web
-    connection_log    0
+    connection_log
     aller_quizz
     aller_exporter_ok
     [Teardown]    close all browsers

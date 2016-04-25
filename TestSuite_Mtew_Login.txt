@@ -9,7 +9,7 @@ Library           String
 Mtew_Login_RightIDs
     [Tags]    login
     connection_web
-    connection_log    0
+    connection_log
     assert_url    welcome?locale=fr
     deconnection_log
     ${result}=    Set Variable    PASS
