@@ -89,8 +89,6 @@ Library           Selenium2Library
     click element    xpath=//li[@id="administrationMenuItem"]//a[@class="dropdown-toggle"]
     wait until page contains element    id=projectsSubMenuItem
     click element    id=recipientsSubMenuItem
-    ${name}=    Get Element Attribute    lastname@value
-    Log To Console    ${name}
 
 !sup_user_Annule
     wait until page contains element    xpath=//table[@class="table table-bordered table-hover push-top-2"]//tr[contains(text(),${TestAdmin})]//td[contains(text(),${TestAdmin})]//label
