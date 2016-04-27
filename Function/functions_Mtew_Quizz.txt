@@ -62,3 +62,6 @@ aller_exporter_ok
 change_projet
     [Arguments]    ${nomProjet}
     !click_projet    ${nomProjet}
+
+form_nom_quizz_proj
+    !projet_quizz_proj

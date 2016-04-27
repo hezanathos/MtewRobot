@@ -123,3 +123,6 @@ Library           ../Scripts/test.py
     [Arguments]    ${nomProjet}
     Wait Until Page Contains Element    id=projectId
     select from list    id=projectId    ${nomProjet}
+
+!projet_quizz_proj
+    page should not contain    FEM

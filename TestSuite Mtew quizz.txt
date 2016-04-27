@@ -6,6 +6,7 @@ Resource          Function/functions_Mtew_Quizz.txt
 *** Test Cases ***
 Mtew_Quizz_Create&Delete
     [Tags]    quizz
+    set_level_0
     connection_web
     connection_log
     aller_quizz
@@ -18,6 +19,7 @@ Mtew_Quizz_Create&Delete
 
 Mtew_Quizz_Create_voir_Delete
     [Tags]    quizz
+    set_level_0
     connection_web
     connection_log
     aller_quizz
@@ -32,6 +34,7 @@ Mtew_Quizz_Create_voir_Delete
 
 Mtew_Quizz_Create_publier_Delete
     [Tags]    quizz
+    set_level_0
     connection_web
     connection_log
     aller_quizz
@@ -44,8 +47,9 @@ Mtew_Quizz_Create_publier_Delete
     suppr_recent_quizz
     [Teardown]    close all browsers
 
-Mtew_Quizz_Create_FEM_Delete
+Mtew_Quizz_Create_FEM_Delete_as_Tech
     [Tags]    quizz
+    set_level_0
     connection_web
     connection_log
     aller_quizz
@@ -57,8 +61,19 @@ Mtew_Quizz_Create_FEM_Delete
     suppr_recent_quizz
     [Teardown]    close all browsers
 
+Mtew_Quizz_Create_FEM_Delete_as_Proj
+    [Tags]    quizz
+    set_level_1
+    connection_web
+    connection_log
+    aller_quizz
+    acces_crea_quizz
+    form_nom_quizz_proj
+    [Teardown]    close all browsers
+
 Mtew_Quizz_Create_addQuestion_Delete
     [Tags]    quizz
+    set_level_0
     connection_web
     connection_log
     aller_quizz
@@ -75,6 +90,7 @@ Mtew_Quizz_Create_addQuestion_Delete
 
 Mtew_Quizz_Create_addQuestions_Delete
     [Tags]    quizz
+    set_level_0
     connection_web
     connection_log
     aller_quizz
@@ -95,6 +111,7 @@ Mtew_Quizz_Create_addQuestions_Delete
 
 Mtew_Quizz_Exporter_null
     [Tags]    quizz
+    set_level_0
     connection_web
     connection_log
     aller_quizz

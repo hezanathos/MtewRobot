@@ -6,6 +6,6 @@ Resource          Function/functions_Mtew_Sondage.txt
 *** Test Cases ***
 TestCase_Sondage
     connection_web
-    connection_log    0
+    connection_log
     acces_sondage
     add_sondage

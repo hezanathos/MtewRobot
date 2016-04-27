@@ -114,7 +114,7 @@ Mtew_Projets_Session
 Mtew_Projets_WrongDelete
     [Tags]    projects
     connection_web
-    connection_log    0
+    connection_log
     lang_fr
     access_project_panel
     assert_url    projects
