@@ -20,10 +20,13 @@ Resource          ../Conf/conf_Mtew_URLs.txt
 
 !input_name
     [Arguments]    ${nom}    ${desc}
+    wait until page contains element    id=name
     input text    id=name    ${nom}
+    wait until page contains element    id=projectDescription
     input text    id=projectDescription    ${desc}
 
 !input_services
+    Wait Until Page Contains Element    xpath=//label[@for="servicesIds1"]
     click element    xpath=//label[@for="servicesIds1"]
     click element    xpath=//label[@for="servicesIds3"]
 
@@ -79,8 +82,10 @@ Resource          ../Conf/conf_Mtew_URLs.txt
     click element    xpath=//input[@value="Rechercher"]
 
 !upload_record_name
+    wait until page contains element    xpath=//span[@class="sound-icon"]
     click element    xpath=//span[@class="sound-icon"]
     ${tempUrl}=    Catenate    SEPARATOR=    ${TestAbsoluteLocation}    ${recordLocation}
+    wait until page contains element    xpath=//input[@type="file"]
     choose file    xpath=//input[@type="file"]    ${tempUrl}
 
 !lang_eng

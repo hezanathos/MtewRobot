@@ -42,6 +42,7 @@ Mtew_Login_NoLogAccess
     \    assert_url    signin
     connection_log
     ${lastUrl}=    get from list    ${pageList}    -1
+    log to console    ${lastUrl}
     ${tempUrl]}=    catenate    SEPARATOR=    ${lastUrl}    ?locale=fr
     assert_url    ${tempUrl}
     ${result}=    Set Variable    PASS
