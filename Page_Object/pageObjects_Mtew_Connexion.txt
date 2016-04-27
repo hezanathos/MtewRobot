@@ -30,6 +30,7 @@ Library           ../Scripts/test.py
 
 !assert_url
     [Arguments]    ${url}
+    wait until page contains element    xpath=//footer
     ${tempUrl}=    catenate    SEPARATOR=    ${MtewAddress}    ${url}
     location should be    ${tempUrl}
 

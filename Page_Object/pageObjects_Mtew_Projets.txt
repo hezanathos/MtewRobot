@@ -26,9 +26,11 @@ Resource          ../Conf/conf_Mtew_URLs.txt
     input text    id=projectDescription    ${desc}
 
 !input_services
+    [Arguments]    ${bool}
     Wait Until Page Contains Element    xpath=//label[@for="servicesIds1"]
     click element    xpath=//label[@for="servicesIds1"]
     click element    xpath=//label[@for="servicesIds3"]
+    run keyword if    ${bool}==1    click element    xpath=//label[@for="servicesIds2"]
 
 !assert_insert
     wait until page contains element    xpath=//div[@class="col-md-6 pull-right"]
@@ -114,3 +116,10 @@ Resource          ../Conf/conf_Mtew_URLs.txt
 
 !nom_quizz_proj
     page should not contain    FEM
+
+!access_edit_panel
+    wait until page contains element    xpath=//td[@class="actionsCell"]//a[2]
+    click element    xpath=//td[@class="actionsCell"]//a[2]
+
+!wait_project_page
+    wait until page contains element    id=projectTable

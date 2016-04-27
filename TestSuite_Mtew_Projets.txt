@@ -41,6 +41,7 @@ Mtew_Projets_WrongNameInsert
 Mtew_Projets_WrongServicesInsert
     [Tags]    projects
     [Setup]
+    set_level_0
     connection_web
     connection_log
     lang_fr
@@ -67,6 +68,7 @@ Mtew_Projets_WrongServicesInsert
 
 Mtew_Projets_Services
     [Tags]    projects
+    set_level_0
     connection_web
     connection_log
     lang_fr
@@ -84,6 +86,7 @@ Mtew_Projets_Services
 
 Mtew_Projets_Filtres
     [Tags]    projects
+    set_level_0
     connection_web
     connection_log
     lang_fr
@@ -100,14 +103,51 @@ Mtew_Projets_Filtres
     [Teardown]    Run keywords    close all browsers
     ...    AND    write_log    ${testName}    ${result}
 
+Mtew_Projets_WrongEdit
+    [Tags]    projects
+    set_level_0
+    connection_web
+    connection_log
+    access_project_panel
+    access_edit_panel
+    uncheck_services
+    submit_form_add
+    assert_error    ${keyServicesEmpty}    ${fichierFR}
+    ${result}=    Set Variable    PASS
+    [Teardown]    Run keywords    close all browsers
+    ...    AND    write_log    ${testName}    ${result}
+
+Mtew_Projets_RightEdit
+    [Tags]    projects
+    set_level_0
+    connection_web
+    connection_log
+    access_project_panel
+    access_edit_panel
+    new_services
+    submit_form_add
+    wait_project_page
+    assert_url    projects
+    acces_QCM
+    assert_presence    0
+    acces_message
+    assert_presence    0
+    acces_sondage
+    assert_presence    1
+    acces_question
+    assert_presence    0
+    ${result}=    Set Variable    PASS
+    [Teardown]    Run keywords    close all browsers
+    ...    AND    write_log    ${testName}    ${result}
+
 Mtew_Projets_Session_tech
     [Tags]    projects
     set_level_0
     connection_web
     connection_log
     acces_QCM
-    select_projet    FEM
-    assert_selected    "FEM"
+    select_projet    ${testNom}
+    assert_selected    ${testNom}
     ${result}=    Set Variable    PASS
     [Teardown]    Run keywords    close all browsers
     ...    AND    write_log    ${testName}    ${result}
@@ -119,11 +159,13 @@ Mtew_Projets_Session_proj
     connection_log
     acces_QCM
     nom_quizz_proj
+    ${result}=    Set Variable    PASS
     [Teardown]    Run keywords    close all browsers
     ...    AND    write_log    ${testName}    ${result}
 
 Mtew_Projets_WrongDelete
     [Tags]    projects
+    set_level_0
     connection_web
     connection_log
     lang_fr
@@ -144,6 +186,7 @@ Mtew_Projets_WrongDelete
 
 Mtew_Projets_RightDelete
     [Tags]    projects
+    set_level_0
     connection_web
     connection_log
     access_project_panel
