@@ -28,3 +28,9 @@ bad_connection
 navigation_web
     [Arguments]    ${page}
     !changer_page    ${page}
+
+set_level_0
+    set Suite variable    ${connectionLevel}    0
+
+set_level_1
+    set Suite variable    ${connectionLevel}    1

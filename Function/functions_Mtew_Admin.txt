@@ -43,3 +43,11 @@ Modif_admin
 
 acces_destinataire
     !access_destinataire
+
+access_admin_tech_as_Tech
+    !access_admin
+    !access_gestion_user
+
+access_admin_tech_as_Proj
+    !access_admin
+    !access_gestion_user_as_proj

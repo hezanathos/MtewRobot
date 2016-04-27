@@ -111,3 +111,6 @@ Resource          ../Conf/conf_Mtew_URLs.txt
     [Arguments]    ${projet}
     wait until page contains element    id=projectId
     Select From List By Label    id=projectId    ${projet}
+
+!nom_quizz_proj
+    page should not contain    FEM

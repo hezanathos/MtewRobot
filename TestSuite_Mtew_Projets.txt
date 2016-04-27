@@ -100,8 +100,9 @@ Mtew_Projets_Filtres
     [Teardown]    Run keywords    close all browsers
     ...    AND    write_log    ${testName}    ${result}
 
-Mtew_Projets_Session
+Mtew_Projets_Session_tech
     [Tags]    projects
+    set_level_0
     connection_web
     connection_log
     acces_QCM
@@ -111,10 +112,20 @@ Mtew_Projets_Session
     [Teardown]    Run keywords    close all browsers
     ...    AND    write_log    ${testName}    ${result}
 
+Mtew_Projets_Session_proj
+    [Tags]    projects
+    set_level_1
+    connection_web
+    connection_log
+    acces_QCM
+    nom_quizz_proj
+    [Teardown]    Run keywords    close all browsers
+    ...    AND    write_log    ${testName}    ${result}
+
 Mtew_Projets_WrongDelete
     [Tags]    projects
     connection_web
-    connection_log    0
+    connection_log
     lang_fr
     access_project_panel
     assert_url    projects

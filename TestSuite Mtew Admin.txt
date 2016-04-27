@@ -3,22 +3,31 @@ Resource          Function/functions_Mtew_Connexion.txt
 Resource          Function/functions_Mtew_Admin.txt
 
 *** Test Cases ***
+Mtew_TechAdmin_adminAccess_as_Tech
+    set_level_0
+    connection_web
+    connection_log
+    access_admin_tech_as_Tech
+    [Teardown]    close all browsers
+
+Mtew_TechAdmin_adminAccess_as_Proj
+    set_level_1
+    connection_web
+    connection_log
+    access_admin_tech_as_Proj
+    [Teardown]    close all browsers
+
 Mtew_TechAdmin_Create
     [Tags]    admin
+    set_level_0
     connection_web
     connection_log
     access_admin
     [Teardown]    close all browsers
 
-Mtew_TechAdmin_Profile
-    [Tags]    admin
-    connection_web
-    connection_log
-    acces_admintech
-    [Teardown]    close all browsers
-
 Mtew_TechAdmin_Destroy
     [Tags]    admin
+    set_level_0
     connection_web
     connection_log
     suppr_admin
@@ -26,6 +35,7 @@ Mtew_TechAdmin_Destroy
 
 Mtew_TechAdmin_Cancel_Destroy
     [Tags]    admin
+    set_level_0
     connection_web
     connection_log
     access_admin
@@ -34,6 +44,7 @@ Mtew_TechAdmin_Cancel_Destroy
 
 Mtew_TechAdmin_View
     [Tags]    admin
+    set_level_0
     connection_web
     connection_log
     Visual_admin
@@ -41,13 +52,23 @@ Mtew_TechAdmin_View
 
 Mtew_TechAdmin_Edit
     [Tags]    admin
+    set_level_0
     connection_web
     connection_log
     Modif_admin
     [Teardown]    close all browsers
 
-Mtew_TechDestinataire_Profile
+Mtew_TechDestinataire_Profile_tech
     [Tags]    admin
+    set_level_0
+    connection_web
+    connection_log
+    acces_destinataire
+    [Teardown]    close all browsers
+
+Mtew_TechDestinataire_Profile_proj
+    [Tags]    admin
+    set_level_1
     connection_web
     connection_log
     acces_destinataire
