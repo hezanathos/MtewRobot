@@ -73,3 +73,6 @@ assert_selected
 select_projet
     [Arguments]    ${projet}
     !select_projet    ${projet}
+
+nom_quizz_proj
+    !nom_quizz_proj

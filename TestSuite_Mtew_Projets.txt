@@ -100,14 +100,25 @@ Mtew_Projets_Filtres
     [Teardown]    Run keywords    close all browsers
     ...    AND    write_log    ${testName}    ${result}
 
-Mtew_Projets_Session
+Mtew_Projets_Session_tech
     [Tags]    projects
+    set_level_0
     connection_web
     connection_log
     acces_QCM
     select_projet    FEM
     assert_selected    "FEM"
     ${result}=    Set Variable    PASS
+    [Teardown]    Run keywords    close all browsers
+    ...    AND    write_log    ${testName}    ${result}
+
+Mtew_Projets_Session_proj
+    [Tags]    projects
+    set_level_1
+    connection_web
+    connection_log
+    acces_QCM
+    nom_quizz_proj
     [Teardown]    Run keywords    close all browsers
     ...    AND    write_log    ${testName}    ${result}
 
