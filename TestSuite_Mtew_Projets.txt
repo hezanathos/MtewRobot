@@ -49,8 +49,9 @@ Mtew_Projets_WrongServicesInsert
     access_add_project
     assert_url    projects/add
     fill_form_add
-    fill_form_add
+    uncheck_services
     submit_form_add
+    wait_error_panel
     assert_url    projects/add
     assert_error    ${keyServicesEmpty}    ${fichierFR}
     lang_eng
@@ -58,7 +59,7 @@ Mtew_Projets_WrongServicesInsert
     access_add_project
     assert_url    projects/add
     fill_form_add
-    fill_form_add
+    uncheck_services
     submit_form_add
     assert_url    projects/add
     assert_error    ${keyServicesEmpty}    ${fichierEN}
@@ -103,6 +104,32 @@ Mtew_Projets_Filtres
     [Teardown]    Run keywords    close all browsers
     ...    AND    write_log    ${testName}    ${result}
 
+Mtew_Projets_Session_tech
+    [Tags]    projects
+    set_level_0
+    connection_web
+    connection_log
+    acces_QCM
+    select_projet    ${testNom}
+    assert_selected    \"${testNom}\"
+    acces_message
+    sleep    15
+    assert_selected    \"${testNom}\"
+    ${result}=    Set Variable    PASS
+    [Teardown]    Run keywords    close all browsers
+    ...    AND    write_log    ${testName}    ${result}
+
+Mtew_Projets_Session_proj
+    [Tags]    projects
+    set_level_1
+    connection_web
+    connection_log
+    acces_QCM
+    nom_quizz_proj
+    ${result}=    Set Variable    PASS
+    [Teardown]    Run keywords    close all browsers
+    ...    AND    write_log    ${testName}    ${result}
+
 Mtew_Projets_WrongEdit
     [Tags]    projects
     set_level_0
@@ -136,29 +163,6 @@ Mtew_Projets_RightEdit
     assert_presence    1
     acces_question
     assert_presence    0
-    ${result}=    Set Variable    PASS
-    [Teardown]    Run keywords    close all browsers
-    ...    AND    write_log    ${testName}    ${result}
-
-Mtew_Projets_Session_tech
-    [Tags]    projects
-    set_level_0
-    connection_web
-    connection_log
-    acces_QCM
-    select_projet    ${testNom}
-    assert_selected    ${testNom}
-    ${result}=    Set Variable    PASS
-    [Teardown]    Run keywords    close all browsers
-    ...    AND    write_log    ${testName}    ${result}
-
-Mtew_Projets_Session_proj
-    [Tags]    projects
-    set_level_1
-    connection_web
-    connection_log
-    acces_QCM
-    nom_quizz_proj
     ${result}=    Set Variable    PASS
     [Teardown]    Run keywords    close all browsers
     ...    AND    write_log    ${testName}    ${result}

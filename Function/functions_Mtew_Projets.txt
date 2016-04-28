@@ -88,3 +88,6 @@ uncheck_services
 
 wait_project_page
     !wait_project_page
+
+wait_error_panel
+    !wait_error_panel
