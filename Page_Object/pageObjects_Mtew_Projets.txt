@@ -112,10 +112,11 @@ Resource          ../Conf/conf_Mtew_URLs.txt
 !select_projet
     [Arguments]    ${projet}
     wait until page contains element    id=projectId
+    sleep    1
     Select From List By Label    id=projectId    ${projet}
 
 !nom_quizz_proj
-    page should not contain    FEM
+    page should not contain    TestDev
 
 !access_edit_panel
     wait until page contains element    xpath=//td[@class="actionsCell"]//a[2]

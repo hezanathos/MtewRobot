@@ -9,7 +9,9 @@ access_add_project
     !access_add_project
 
 fill_form_add
-    !input_name    ${testNom}    ${testDesc}
+    [Arguments]    ${bool}
+    run keyword if    ${bool}==0    !input_name    ${testNom}    ${testDesc}
+    ...    ELSE    !input_name    ${testDesc}    ${testNom}
     !upload_record_name
     !input_services    0
 

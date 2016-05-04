@@ -42,8 +42,8 @@ Library           ../Scripts/test.py
     input text    explanation    test_1
 
 !click_ajout_quizz
-    Wait Until Page Contains Element    xpath=//a[@href="/M-tew/quiz/add?project_id=1"]
-    click element    xpath=//a[@href="/M-tew/quiz/add?project_id=1"]
+    Wait Until Page Contains Element    xpath=//form[@id="quizListForm"]//div[1]//a[3]
+    click element    xpath=//form[@id="quizListForm"]//div[1]//a[3]
 
 !validation_quizz
     wait until page contains element    xpath=//input[@value="Sauvegarder"]
@@ -125,4 +125,4 @@ Library           ../Scripts/test.py
     select from list    id=projectId    ${nomProjet}
 
 !projet_quizz_proj
-    page should not contain    FEM
+    page should not contain    TestDev

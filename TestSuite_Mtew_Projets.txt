@@ -12,7 +12,7 @@ Mtew_Projets_RightInsert
     access_project_panel
     access_add_project
     assert_url    projects/add
-    fill_form_add
+    fill_form_add    0
     submit_form_add
     ${result}=    Set Variable    PASS
     [Teardown]    Run keywords    close all browsers
@@ -48,7 +48,7 @@ Mtew_Projets_WrongServicesInsert
     access_project_panel
     access_add_project
     assert_url    projects/add
-    fill_form_add
+    fill_form_add    1
     uncheck_services
     submit_form_add
     wait_error_panel
@@ -58,7 +58,7 @@ Mtew_Projets_WrongServicesInsert
     access_project_panel
     access_add_project
     assert_url    projects/add
-    fill_form_add
+    fill_form_add    1
     uncheck_services
     submit_form_add
     assert_url    projects/add
@@ -74,6 +74,7 @@ Mtew_Projets_Services
     connection_log
     lang_fr
     acces_QCM
+    select_projet    FEM
     assert_presence    1
     acces_message
     assert_presence    1

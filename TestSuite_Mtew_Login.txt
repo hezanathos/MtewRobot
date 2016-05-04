@@ -43,7 +43,7 @@ Mtew_Login_NoLogAccess
     connection_log
     ${lastUrl}=    get from list    ${pageList}    -1
     log to console    ${lastUrl}
-    ${tempUrl]}=    catenate    SEPARATOR=    ${lastUrl}    ?locale=fr
+    ${tempUrl}=    catenate    SEPARATOR=    ${lastUrl}    ?locale=fr
     assert_url    ${tempUrl}
     ${result}=    Set Variable    PASS
     [Teardown]    Run keywords    close all browsers

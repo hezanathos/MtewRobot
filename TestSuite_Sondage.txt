@@ -9,3 +9,4 @@ TestCase_Sondage
     connection_log
     acces_sondage
     add_sondage
+    [Teardown]    close all browsers

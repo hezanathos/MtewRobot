@@ -2,6 +2,7 @@
 Suite Teardown    close all browsers
 Resource          Function/functions_Mtew_Connexion.txt
 Resource          Function/functions_Mtew_Quizz.txt
+Resource          Function/functions_Mtew_Projets.txt
 
 *** Test Cases ***
 Mtew_Quizz_Create&Delete
@@ -14,6 +15,7 @@ Mtew_Quizz_Create&Delete
     form_nom_quizz    TestDev
     form_questions_quizz
     validation_quizz
+    select_projet    TestDev
     suppr_recent_quizz
     [Teardown]    close all browsers
 
@@ -27,8 +29,10 @@ Mtew_Quizz_Create_voir_Delete
     form_nom_quizz    TestDev
     form_questions_quizz
     validation_quizz
+    select_projet    TestDev
     aller_voir_quizz
     retour_voir_quizz
+    select_projet    TestDev
     suppr_recent_quizz
     [Teardown]    close all browsers
 
@@ -42,8 +46,10 @@ Mtew_Quizz_Create_publier_Delete
     form_nom_quizz    TestDev
     form_questions_quizz
     validation_quizz
+    select_projet    TestDev
     aller_publier_quizz
     retour_publier_quizz
+    select_projet    TestDev
     suppr_recent_quizz
     [Teardown]    close all browsers
 
@@ -81,10 +87,12 @@ Mtew_Quizz_Create_addQuestion_Delete
     form_nom_quizz    TestDev
     form_questions_quizz
     validation_quizz
+    select_projet    TestDev
     aller_modifier_quizz
     add_question_quizz
     form_questions2_quizz
     validation_quizz
+    select_projet    TestDev
     suppr_recent_quizz
     [Teardown]    close all browsers
 
@@ -98,14 +106,17 @@ Mtew_Quizz_Create_addQuestions_Delete
     form_nom_quizz    TestDev
     form_questions_quizz
     validation_quizz
+    select_projet    TestDev
     aller_modifier_quizz
     add_question_quizz
     form_questions2_quizz
     validation_quizz
+    select_projet    TestDev
     aller_modifier_quizz
     add_question_quizz
     form_questions2_quizz
     validation_quizz
+    select_projet    TestDev
     suppr_recent_quizz
     [Teardown]    close all browsers
 
