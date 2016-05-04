@@ -11,6 +11,7 @@ Resource          ../Conf/conf_Mtew_URLs.txt
     click element    id=projectsSubMenuItem
 
 !access_add_project
+    sleep    2
     wait until page contains element    xpath=//span[@class="glyphicon glyphicon-plus-sign glyphicon-primary"]
     click element    xpath=//span[@class="glyphicon glyphicon-plus-sign glyphicon-primary"]
 
@@ -27,6 +28,7 @@ Resource          ../Conf/conf_Mtew_URLs.txt
 
 !input_services
     [Arguments]    ${bool}
+    sleep    2
     Wait Until Page Contains Element    xpath=//label[@for="servicesIds1"]
     click element    xpath=//label[@for="servicesIds1"]
     click element    xpath=//label[@for="servicesIds3"]
@@ -77,6 +79,7 @@ Resource          ../Conf/conf_Mtew_URLs.txt
 
 !input_filtre_desc
     [Arguments]    ${bool}
+    sleep    2
     Wait Until Page Contains Element    id=name
     input text    id=name    ${empty}
     run keyword if    ${bool}==1    input text    id=description    ${testDesc}
@@ -125,6 +128,7 @@ Resource          ../Conf/conf_Mtew_URLs.txt
     click element    xpath=//td[@class="actionsCell"]//a[2]
 
 !wait_project_page
+    sleep    2
     wait until page contains element    id=projectTable
 
 !wait_error_panel
