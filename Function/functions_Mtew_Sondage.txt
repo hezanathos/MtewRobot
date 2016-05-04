@@ -1,5 +1,4 @@
 *** Settings ***
-Resource          ../Page_Object/pageObjects_Mtew_Sondage.txt
 
 *** Keywords ***
 add_Sondage

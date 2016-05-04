@@ -25,14 +25,6 @@ Mtew_TechAdmin_Create
     access_admin
     [Teardown]    close all browsers
 
-Mtew_TechAdmin_Destroy
-    [Tags]    admin
-    set_level_0
-    connection_web
-    connection_log
-    suppr_admin
-    [Teardown]    close all browsers
-
 Mtew_TechAdmin_Cancel_Destroy
     [Tags]    admin
     set_level_0
@@ -40,6 +32,14 @@ Mtew_TechAdmin_Cancel_Destroy
     connection_log
     access_admin
     suppr_admin_Annule
+    [Teardown]    close all browsers
+
+Mtew_TechAdmin_Destroy
+    [Tags]    admin
+    set_level_0
+    connection_web
+    connection_log
+    suppr_admin
     [Teardown]    close all browsers
 
 Mtew_TechAdmin_View

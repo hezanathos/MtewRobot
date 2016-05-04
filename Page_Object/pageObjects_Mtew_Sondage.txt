@@ -1,6 +1,5 @@
 *** Settings ***
 Library           Selenium2Library
-Resource          ../Conf/conf_Mtew_Sondage.txt
 
 *** Keywords ***
 !click_add_sondage

@@ -1,3 +1,0 @@
-*** Variables ***
-${nomSondageNath}    Test_de_Nath
-${SujetSondage}    Je dois saisir le theme du sondage
