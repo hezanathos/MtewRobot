@@ -114,7 +114,7 @@ Resource          ../Conf/conf_Mtew_URLs.txt
     wait until page contains element    id=projectId
     wait until page contains element    id=projectId
     wait until page contains element    id=projectId
-    sleep    3
+    sleep    0
     Select From List By Label    id=projectId    ${projet}
 
 !nom_quizz_proj
