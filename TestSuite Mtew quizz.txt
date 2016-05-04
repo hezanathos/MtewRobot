@@ -87,11 +87,13 @@ Mtew_Quizz_Create_addQuestion_Delete
     form_nom_quizz    TestDev
     form_questions_quizz
     validation_quizz
+    sleep    3
     select_projet    TestDev
     aller_modifier_quizz
     add_question_quizz
     form_questions2_quizz
     validation_quizz
+    sleep    3
     select_projet    TestDev
     suppr_recent_quizz
     [Teardown]    close all browsers
@@ -106,16 +108,19 @@ Mtew_Quizz_Create_addQuestions_Delete
     form_nom_quizz    TestDev
     form_questions_quizz
     validation_quizz
+    sleep    3
     select_projet    TestDev
     aller_modifier_quizz
     add_question_quizz
     form_questions2_quizz
     validation_quizz
+    sleep    3
     select_projet    TestDev
     aller_modifier_quizz
     add_question_quizz
     form_questions2_quizz
     validation_quizz
+    sleep    3
     select_projet    TestDev
     suppr_recent_quizz
     [Teardown]    close all browsers
